@@ -1,4 +1,4 @@
-# tulip-web
+# Tulip
 
 Chrome extension for a voice activated web navigation agent. Inspired by [firefox voice](https://github.com/mozilla/firefox-voice)
 
