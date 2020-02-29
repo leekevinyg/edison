@@ -26,5 +26,6 @@ module.exports = {
     "no-use-before-define": "off",
     "import/extensions": "off",
     "no-plusplus": "off",
+    "class-methods-use-this": "off",
   },
 };

@@ -1,4 +1,13 @@
-.popup-container {
+.popup-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+.popup-state {
+    border: 1px solid  black;
+    margin-bottom: 10px;
+}
+
+.popup-transcription {
+    border: 1px solid black;
 }

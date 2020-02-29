@@ -1,4 +1,10 @@
 /* global chrome */
+
+/**
+ * This file is responsible for:
+ *   - Acquiring permissions to the user's microphone
+ */
+
 import { TIMEOUTS } from './constants.js';
 
 let stream = null;

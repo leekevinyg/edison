@@ -1,13 +1,11 @@
 /* global React, PropTypes */
 
-const OnboardingView = ({ permissionError }) => (permissionError
-  ? (
-    <div>
-      {permissionError}
-    </div>
-  )
-  : <div>Instructions on how to use Tulip Voice</div>
-);
+const OnboardingView = ({ permissionError }) => (permissionError ? (
+  <div>
+    {permissionError}
+  </div>
+)
+  : <div>Instructions on how to use Tulip Voice</div>);
 
 export default OnboardingView;
 
