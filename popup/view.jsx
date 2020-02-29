@@ -1,7 +1,5 @@
 /* global React, PropTypes */
 
-import { STATES } from './constants';
-
 const Popup = ({ currentState, transcription }) => (
   <div className="popup-wrapper">
     <div className="popup-state">
@@ -21,6 +19,6 @@ Popup.propTypes = {
 };
 
 Popup.defaultProps = {
-  currentState: STATES.WAITING,
+  currentState: "Waiting...",
   transcription: 'No Available Transcription',
 };
