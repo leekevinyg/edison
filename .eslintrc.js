@@ -23,6 +23,7 @@ module.exports = {
     'react',
   ],
   rules: {
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "import/extensions": "off",
   },
 };

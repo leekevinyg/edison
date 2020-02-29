@@ -1,15 +1,10 @@
 /* global chrome */
-import { TIMEOUTS } from './constants';
+import { TIMEOUTS } from './constants.js';
 
-// let isWaitingForPermission = false;
-// let stream = null;
 const startMicStream = async () => {
   try {
-    // isWaitingForPermission = Date.now();
     await startMicrophone();
-    // isWaitingForPermission = false;
   } catch (e) {
-    // isWaitingForPermission = false;
     if (e.name === 'NotAllowedError' || e.name === 'TimeoutError') {
       startOnboarding();
       window.close();
@@ -21,8 +16,6 @@ const startMicStream = async () => {
 
 const requestMicrophone = async () => {
   await navigator.mediaDevices.getUserMedia({ audio: true });
-  // stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-  // return stream;
 };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

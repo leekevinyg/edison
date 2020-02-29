@@ -6,15 +6,16 @@
  *   - Displaying microphone status and transcription to the user
 */
 
-import * as view from './view';
-import { STATES } from './constants';
-import Microphone from './microphone';
+import Popup from './view.js';
+import { STATES } from './constants.js';
+import Microphone from './microphone.js';
 
 const { useState, useEffect } = React;
 const popupContainer = document.getElementById('popup-container');
 let isInitialized = false;
 
 const PopupController = () => {
+  // eslint-disable-next-line no-unused-vars
   const [currentView, setCurrentView] = useState(STATES.WAITING);
   const [displayText, setDisplayText] = useState(null); // eslint-disable-line no-unused-vars
 
@@ -53,9 +54,7 @@ const PopupController = () => {
   };
 
   return (
-    <view.Popup
-      currentView={currentView}
-    />
+    <Popup />
   );
 };
 
