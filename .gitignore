@@ -1,3 +1,4 @@
 popup/controller.js
 popup/view.js
 node_modules
+.DS_Store
