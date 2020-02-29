@@ -1,7 +1,8 @@
 /* global React, ReactDOM, chrome */
+
 /**
  * This file handles:
- *   - Starting the microphone
+ *   - Starting the microphone stream
  *   - Receiving messages from our speech recognition engine
  *   - Displaying microphone status and transcription to the user
 */

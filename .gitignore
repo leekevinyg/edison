@@ -1,4 +1,6 @@
 popup/controller.js
 popup/view.js
+onboarding/controller.js
+onboarding/view.js
 node_modules
 .DS_Store

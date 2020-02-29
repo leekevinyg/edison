@@ -5,8 +5,8 @@
   "main": "background.js",
   "scripts": {
     "build": "babel --relative --out-dir . '**/*.jsx'",
-    "lint": "eslint --rule '{\"no-console\": \"error\"}' --ext 'js,jsx' popup/",
-    "fix-lint": "eslint --fix --rule '{\"no-console\": \"error\"}' --ext 'js,jsx' popup/"
+    "lint": "eslint --rule '{\"no-console\": \"error\"}' --ext 'js,jsx' popup/ onboarding/",
+    "fix-lint": "eslint --fix --rule '{\"no-console\": \"error\"}' --ext 'js,jsx' popup/ onboarding/"
   },
   "keywords": [
     "voice",

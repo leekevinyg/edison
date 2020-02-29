@@ -1,9 +1,11 @@
 /* global chrome */
 import { TIMEOUTS } from './constants.js';
 
+let stream = null;
+
 const startMicStream = async () => {
   try {
-    await startMicrophone();
+    stream = await startMicrophone();
   } catch (e) {
     if (e.name === 'NotAllowedError' || e.name === 'TimeoutError') {
       startOnboarding();
