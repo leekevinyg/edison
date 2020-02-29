@@ -1,5 +1,3 @@
-export const Popup = ({
-    currentView,
-}) => {
-    return <div>Hello from view</div>
-}
+/* global React */
+const Popup = () => <div>Hello from view</div>;
+export default Popup;

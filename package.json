@@ -4,7 +4,9 @@
   "description": "Voice activated web navigation for chrome",
   "main": "background.js",
   "scripts": {
-    "build:jsx": "babel --relative --out-dir . '**/*.jsx'"
+    "build": "babel --relative --out-dir . '**/*.jsx'",
+    "lint": "eslint --rule '{\"no-console\": \"error\"}' --ext 'js,jsx' popup/",
+    "fix-lint": "eslint --fix --rule '{\"no-console\": \"error\"}' --ext 'js,jsx' popup/"
   },
   "keywords": [
     "voice",
@@ -19,6 +21,12 @@
     "@babel/core": "^7.8.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-modules-commonjs": "^7.8.3",
-    "@babel/plugin-transform-react-jsx": "^7.8.3"
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
   }
 }
