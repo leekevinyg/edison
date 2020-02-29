@@ -2,13 +2,15 @@
 
 This file handles:
 
-- Starting the recorder
+- Starting the microphone
 - Receiving messages from our speech recognition engine
+- Displaying microphone status and transcription to the user
 
 */
 
 import * as view from "./view.js";
-import { STATES, TIMEOUTS } from './constants.js';
+import { STATES } from './constants.js';
+import { startMicStream } from './microphone.js';
 
 const { useState, useEffect } = React;
 const popupContainer = document.getElementById("popup-container");
@@ -16,6 +18,7 @@ let isInitialized = false;
 
 const PopupController = function() {
     const [currentView, setCurrentView] = useState(STATES.WAITING);
+    const [displayText, setDisplayText] = useState(null);
 
     useEffect(() => {
         if (!isInitialized) {
@@ -26,7 +29,7 @@ const PopupController = function() {
 
     const init = async () => {
         // start microphone stream and onboarding here if permissions are not set yet.
-        await navigator.mediaDevices.getUserMedia({audio: true})
+        startMicStream();
         // Listen for messages from the background scripts
         chrome.runtime.onMessage.addListener(handleMessage);
     };
@@ -34,12 +37,15 @@ const PopupController = function() {
     const handleMessage = message => {
         switch (message.type) {
             case "closePopup": {
+                window.close();
                 break;
             }
             case "error": {
+                setCurrentView(STATES.ERROR);
                 break;
             }
             case "displayText": {
+                setDisplayText(message.payload);
                 break;
             }
             default:
