@@ -1,0 +1,20 @@
+{
+  "name": "tulip-web",
+  "version": "1.0.0",
+  "description": "Voice activated web navigation for chrome",
+  "main": "background.js",
+  "scripts": {
+    "babel:jsx": "babel --watch popup --out-dir popup --presets react-app/prod"
+  },
+  "keywords": [
+    "voice",
+    "control",
+    "handsfree"
+  ],
+  "author": "Kevin Lee",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
+}
