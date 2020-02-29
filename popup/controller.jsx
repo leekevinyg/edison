@@ -10,10 +10,13 @@
 import Popup from './view.js';
 import { STATES } from './constants.js';
 import Microphone from './microphone.js';
+import Recorder from './recorder.js';
 
 const { useState, useEffect } = React;
 const popupContainer = document.getElementById('popup-container');
 let isInitialized = false;
+let recorder = null;
+let micStream = null;
 
 const PopupController = () => {
   // eslint-disable-next-line no-unused-vars
@@ -28,10 +31,13 @@ const PopupController = () => {
   });
 
   const init = async () => {
-    // start microphone stream and onboarding here if permissions are not set yet.
+    // start microphone stream or request permissions to microphone if not available
     Microphone.startMicStream();
+    micStream = Microphone.getMicStream();
+    recorder = new Recorder(micStream);
     // Listen for messages from the background scripts
     chrome.runtime.onMessage.addListener(handleMessage);
+    recorder.start();
   };
 
   const handleMessage = (message) => {

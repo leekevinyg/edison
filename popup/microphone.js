@@ -3,9 +3,11 @@ import { TIMEOUTS } from './constants.js';
 
 let stream = null;
 
+const getMicStream = () => stream;
+
 const startMicStream = async () => {
   try {
-    stream = await startMicrophone();
+    await startMicrophone();
   } catch (e) {
     if (e.name === 'NotAllowedError' || e.name === 'TimeoutError') {
       startOnboarding();
@@ -17,7 +19,7 @@ const startMicStream = async () => {
 };
 
 const requestMicrophone = async () => {
-  await navigator.mediaDevices.getUserMedia({ audio: true });
+  stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -39,4 +41,5 @@ const startOnboarding = async () => {
 
 export default {
   startMicStream,
+  getMicStream,
 };
