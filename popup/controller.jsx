@@ -1,11 +1,9 @@
 /* global React, ReactDOM, chrome */
-/*
-This file handles:
-
-- Starting the microphone
-- Receiving messages from our speech recognition engine
-- Displaying microphone status and transcription to the user
-
+/**
+ * This file handles:
+ *   - Starting the microphone
+ *   - Receiving messages from our speech recognition engine
+ *   - Displaying microphone status and transcription to the user
 */
 
 import * as view from './view';
