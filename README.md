@@ -5,10 +5,11 @@ Voice activated web navigation extension for the Chrome browser.
 The project is still under development and is not yet available on the Chrome Store.
 
 - <a href="#Developing">Developing</a>
-- <a href="#Improving Accessibility and Future Directions">Future Directions</a>
-- <a href="#User Guide">User Guide</a>
+- <a href="#Future">Future Directions</a>
+- <a href="#UserGuide">User Guide</a>
 
-# Developing
+<a name="Developing"></a>
+# Development Guide
 
 The architecture was inspired heavily by the [firefox voice](https://github.com/mozilla/firefox-voice) project.
 A detailed overview is available under the [docs]() directory. Each non-trivial file also has a comment section 
@@ -20,6 +21,14 @@ The extension currently utilizes a few external dependencies:
 
 - Intent engine fuzzy search powered by [fuse](https://fusejs.io/).
 
+To start up a development environment that runs the unloaded extension, clone the project and run:
+
+* ``` npm install ``` 
+* ``` npm run build ```
+
+Then, load the project directory as an unpacked chrome extension by following the directions [here](https://developer.chrome.com/extensions/getstarted#manifest)
+
+<a name="Future"></a>
 # Improving Accessibility and Future Directions 
 
 The following projects would increase accessibility of this tool:
@@ -32,6 +41,7 @@ The following improvements would decrease reliance on external third parties:
 - Development of our own custom deep speech recognition server
 - Development of our own voice activity detection algorithms
 
+<a name="UserGuide"></a>
 # User Guide
 
 Currently, the extension can be triggered by clicking on the extension icon in the top right of the chrome toolbar
