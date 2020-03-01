@@ -2,11 +2,13 @@
 
 Voice activated web navigation extension for the Chrome browser.
 
-Speech recognition with [annyang](https://github.com/TalAter/annyang).
+- Speech recognition with [annyang](https://github.com/TalAter/annyang).
 
-Intent engine fuzzy search powered by [fuse](https://fusejs.io/).
+- Intent engine fuzzy search powered by [fuse](https://fusejs.io/).
 
-Architecture inspired by [firefox voice](https://github.com/mozilla/firefox-voice).
+- Architecture inspired by [firefox voice](https://github.com/mozilla/firefox-voice).
+
+# Table Of Contents
 
 - <a href="#Developing">Developing</a>
 - <a href="#UserGuide">User Guide</a>
