@@ -35,7 +35,7 @@ const PopupController = () => {
     recorder = new Recorder();
 
     // listen for recorder events, so we can update the user interface.
-    recorder.onBeginRecording = () => {
+    recorder.onStart = () => {
       setCurrentState(STATES.LISTENING);
     };
 
@@ -45,8 +45,12 @@ const PopupController = () => {
         await new Promise((r) => setTimeout(r, 1500));
         window.close();
       }
-      setTranscription(phrases[0]);
+      setTranscription(phrases);
       // fire intent off to intent engine
+      chrome.runtime.sendMessage({
+        type: 'runIntent',
+        utterence: phrases,
+      });
       setCurrentState(STATES.EXECUTING);
       // TODO: remove this timeout and close once intents are working
       await new Promise((r) => setTimeout(r, 1500));
@@ -55,7 +59,7 @@ const PopupController = () => {
 
     recorder.startRecording();
 
-    // listen for messages from the background scripts
+    // listen for results of our intents
     chrome.runtime.onMessage.addListener(handleMessage);
   };
 

@@ -5,7 +5,7 @@
     "manifest_version": 2,
     "permissions": ["declarativeContent"],
     "background": {
-        "scripts": ["background.js"],
+        "page": "background.html",
         "persistent": false
     },
     "browser_action": {
