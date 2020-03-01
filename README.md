@@ -24,7 +24,7 @@ To start up a development environment that runs the unloaded extension, clone th
 * ``` npm install ``` 
 * ``` npm run build ```
 
-Then, load the project directory as an unpacked chrome extension by following the directions [here].(https://developer.chrome.com/extensions/getstarted#manifest)
+Then, load the project directory as an unpacked chrome extension by following the directions [here](https://developer.chrome.com/extensions/getstarted#manifest)
 
 <a name="Future"></a>
 # Improving Accessibility and Future Directions 
