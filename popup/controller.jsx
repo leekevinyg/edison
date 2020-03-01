@@ -51,10 +51,6 @@ const PopupController = () => {
         type: 'runIntent',
         utterence: phrases,
       });
-      setCurrentState(STATES.EXECUTING);
-      // TODO: remove this timeout and close once intents are working
-      await new Promise((r) => setTimeout(r, 1500));
-      window.close();
     };
 
     recorder.startRecording();

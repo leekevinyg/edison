@@ -3,7 +3,7 @@
     "version": "1.0",
     "description": "Handsfree voice activated browsing of Chrome! Special support for Netflix",
     "manifest_version": 2,
-    "permissions": ["declarativeContent"],
+    "permissions": ["declarativeContent", "tabs"],
     "background": {
         "page": "background.html",
         "persistent": false
