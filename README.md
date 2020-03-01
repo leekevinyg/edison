@@ -1,43 +1,19 @@
 # Tulip
 
-Chrome extension for a voice activated web navigation agent. Inspired by [firefox voice](https://github.com/mozilla/firefox-voice)
+Voice activated web navigation extension for the Chrome browser.
 
-- <a href="#Architecture">Architecture Overview</a>
+Speech recognition with [annyang](https://github.com/TalAter/annyang).
+
+Intent engine fuzzy search powered by [fuse](https://fusejs.io/).
+
+Architecture inspired by [firefox voice](https://github.com/mozilla/firefox-voice).
+
 - <a href="#Developing">Developing</a>
 - <a href="#UserGuide">User Guide</a>
 
-# Architecture
-
-**Background Process**
-- Listens for the keyboard press and pauses all media playback before launching the listening interface
-
-**Listening Interface**
-- Starts microphone stream
-- Handles messages from speech engine containing transcriptions of our commands
-- **States**:
-    - Loading
-    - Error
-    - Listening (Microphone ready and started. Executes Siri-like Chime and shows animation)
-    - Transcribing (One second...)
-    - Results (Got it!)
-
-**OnBoarding Interface (To be Used with Nurse Aid or OT)**
-- Handles microphone permissions
-- Other Settings?
-
-**Microphone Logic**
-- Responsible for detecting speech activity and sending voice stream to speech recognition engine
-
-**Speech Engine**
-- [Cloud based](https://cloud.google.com/speech-to-text/docs) speech-to-text 
-
-**Intent Engine**
-- Receives the microphone transcription, matches it to intent, and executes the intent in a content script 
-  injected into the currently active web page. For supported intents, see the <a href="#UserGuide">User Guide</a>.
-
 # Developing
 
-Section in progress.
+Section in Progress.
 
 # User Guide
 - Open
