@@ -22,13 +22,13 @@ The extension currently utilizes a few external dependencies:
 
 To start up a development environment:
 
-1) Ensure you have (nodejs)[https://nodejs.org/en/download/]. 
-2) Clone the project and run:
+1. Ensure you have [nodejs](https://nodejs.org/en/download/). 
+2. Clone the project and run:
 
 * ``` npm install ``` 
 * ``` npm run build ```
 
-3) Load the project directory as an unpacked chrome extension by following the directions [here](https://developer.chrome.com/extensions/getstarted#manifest)
+3. Load the project directory as an unpacked chrome extension by following the directions [here](https://developer.chrome.com/extensions/getstarted#manifest)
 
 <a name="Future"></a>
 # Improving Accessibility and Future Directions 
