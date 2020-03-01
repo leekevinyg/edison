@@ -1,11 +1,9 @@
 # Tulip
 
-Voice activated web navigation extension for the Chrome browser. 
-
-The project is still under development and is not yet available on the Chrome Store.
+Voice activated web navigation extension for the Chrome browser. The project is still under development and is not yet available on the Chrome Store.
 
 - <a href="#Developing">Developing</a>
-- <a href="#Future">Future Directions</a>
+- <a href="#Future">Improving Accessibility and Future Directions</a>
 - <a href="#UserGuide">User Guide</a>
 
 <a name="Developing"></a>
