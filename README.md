@@ -1,6 +1,7 @@
 # Tulip
 
-Tulip is a voice activated web navigation extension for the Chrome browser. The project is still a work in progress, and is not yet available on the Chrome Store.
+Tulip is a voice activated web navigation extension for the Chrome browser. The project is still a work in progress, and therefore is not
+yet available on the Chrome Store.
 
 - <a href="#Developing">Development Guide</a>
 - <a href="#Future">Improving Accessibility and Future Directions</a>
@@ -19,12 +20,15 @@ The extension currently utilizes a few external dependencies:
 
 - Intent engine fuzzy search powered by [fuse](https://fusejs.io/).
 
-To start up a development environment that runs the unloaded extension, clone the project and run:
+To start up a development environment:
+
+1) Ensure you have (nodejs)[https://nodejs.org/en/download/]. 
+2) Clone the project and run:
 
 * ``` npm install ``` 
 * ``` npm run build ```
 
-Then, load the project directory as an unpacked chrome extension by following the directions [here](https://developer.chrome.com/extensions/getstarted#manifest)
+3) Load the project directory as an unpacked chrome extension by following the directions [here](https://developer.chrome.com/extensions/getstarted#manifest)
 
 <a name="Future"></a>
 # Improving Accessibility and Future Directions 
