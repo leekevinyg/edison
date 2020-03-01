@@ -56,16 +56,16 @@ The following commands are supported.
 - Back
     - Navigates to last visited page in the browser
 - Click
-    - Clicks an element based off a fuzzy search of the web page using [Fuse.js](https://fusejs.io/)
-    - Example: "Click Sign-In", "Click the name of news article", "Click the title of a video"
+    - Clicks an element based off a [fuzzy search](https://en.wikipedia.org/wiki/Approximate_string_matching) of the web page
+    - Example: "Click Sign-In", "Click the title of a video", "Click the title of a news article"
 - Scroll
-    - Scrolls an element based off a fuzzy search of the web page [Fuse.js](https://fusejs.io/)
+    - Scrolls an element based off a fuzzy search of the web page.
     - Example: "Scroll Page Down", "Scroll Page Up", "Scroll Playlist Section", "Scroll Liked Videos"
 - Focus Input 
-    - Focuses an input based off a fuzzy search of the web page using [Fuse.js](https://fusejs.io/)
+    - Focuses an input based off a fuzzy search of the web page.
     - Example: "Focus password field", "Focus search field"
 - Dictate
-    - Dictate into text fields and other input areas
+    - Dictate into currently focused textfield or input area.
 
 - Play/Pause/Fast Forward Media
     - Supported services include Netflix, Youtube and Spotify.
