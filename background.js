@@ -13,7 +13,7 @@ import intentRunner from './intentEngine/runner.js';
 chrome.runtime.onMessage.addListener(async (message) => {
   const { type, utterence } = message;
   switch (type) {
-    case 'runIntent':
+    case 'runIntent': {
       const intent = intentParser.parse(utterence);
       if (intent) {
         intentRunner.run(intent);
@@ -23,6 +23,7 @@ chrome.runtime.onMessage.addListener(async (message) => {
           data: 'No command found. Please try again.',
         });
       }
+    }
       break;
     default:
       break;

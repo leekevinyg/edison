@@ -5,7 +5,7 @@
  */
 
 const parse = (utterence) => {
-  let wordArray = utterence[0].split(' ');
+  const wordArray = utterence[0].split(' ');
   const command = wordArray[0];
   wordArray.unshift();
   switch (command) {
