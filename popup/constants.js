@@ -1,9 +1,9 @@
 export const STATES = {
-  WAITING: 'waiting',
-  LISTENING: 'listening',
-  TRANSCRIBING: 'transcribing',
-  SUCCESS: 'success',
-  ERROR: 'error',
+  WAITING: 'One moment please...',
+  LISTENING: 'Listening...',
+  EXECUTING: 'Executing your intent...',
+  SUCCESS: 'Intent Succesful!',
+  ERROR: 'Sorry, something went wrong. Please try again.',
 };
 
 export const TIMEOUTS = {

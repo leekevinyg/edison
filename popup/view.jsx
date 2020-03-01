@@ -19,6 +19,6 @@ Popup.propTypes = {
 };
 
 Popup.defaultProps = {
-  currentState: "Waiting...",
+  currentState: 'Waiting...',
   transcription: 'No Available Transcription',
 };

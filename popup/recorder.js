@@ -1,54 +1,30 @@
+/* globals annyang */
+
 /**
  * This file is responsible for:
- *   - Starting and stopping microphone recording
- *   - Sending microphone stream to an external speech-to-text service for transcription
- *   - Send recording visualization to popup view?
+ *   - Starting microphone recording
+ *   - Providing functions that send microphone status information
+ *     and transcription results back to the main user interface
  */
 
 class Recorder {
-  constructor(stream) {
-    this.stream = stream;
-    this.mediaRecorder = null;
-    this.cancelled = false;
-    this.chunks = null;
-  }
-
   startRecording() {
-    const audio = new Audio(
-      'https://mozilla.github.io/firefox-voice/chime.ogg',
-    );
-    audio.play();
-    // Build the WebAudio graph we'll be using
-    this.chunks = [];
-    this.audioContext = new AudioContext();
-    this.sourceNode = this.audioContext.createMediaStreamSource(this.stream);
-    this.analyzerNode = this.audioContext.createAnalyser();
-    this.outputNode = this.audioContext.createMediaStreamDestination();
+    annyang.start({
+      autoRestart: false,
+      continuous: false, // will turn off automatically when speech stops
+    });
 
-    // make sure we're doing mono everywhere
-    this.sourceNode.channelCount = 1;
-    this.analyzerNode.channelCount = 1;
-    this.outputNode.channelCount = 1;
+    annyang.addCallback('start', () => {
+      const audio = new Audio('https://mozilla.github.io/firefox-voice/chime.ogg');
+      audio.play();
+    });
 
-    // connect the nodes together
-    this.sourceNode.connect(this.analyzerNode);
-    this.analyzerNode.connect(this.outputNode);
+    annyang.addCallback('soundstart', this.onBeginRecording);
+    annyang.addCallback('result', this.onEndRecording);
 
-    // and set up the recorder
-    const options = {
-      audioBitsPerSecond: 16000,
-      mimeType: "audio/ogg",
-    };
-    // Set up voice activity detector and relevant timers
-  }
-
-  stopRecording() {
-    this.mediaRecorder.stop();
-  }
-
-  cancel() {
-    this.cancelled = true;
-    this.stopRecording();
+    window.addEventListener('unload', () => {
+      annyang.removeCallback();
+    });
   }
 
   onBeginRecording() {
@@ -57,18 +33,6 @@ class Recorder {
 
   onEndRecording() {
     // can be overridden!
-  }
-
-  onError() {
-
-  }
-
-  onProcessing() {
-
-  }
-
-  onNoVoice() {
-
   }
 }
 
