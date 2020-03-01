@@ -54,7 +54,6 @@ const PopupController = () => {
     };
 
     recorder.startRecording();
-
     // listen for results of our intents
     chrome.runtime.onMessage.addListener(handleMessage);
   };

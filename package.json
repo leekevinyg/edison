@@ -5,6 +5,7 @@
   "main": "background.js",
   "scripts": {
     "build": "babel --relative --out-dir . '**/*.jsx'",
+    "watch": "babel --watch --relative --out-dir . '**/*.jsx'",
     "lint": "eslint --rule '{\"no-console\": \"error\"}' --ext 'js,jsx' background.js popup/ onboarding/ intentEngine/ intents/",
     "fix-lint": "eslint --fix --rule '{\"no-console\": \"error\"}' --ext 'js,jsx' background.js popup/ onboarding/ intentEngine/ intents/"
   },
