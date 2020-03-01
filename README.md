@@ -18,7 +18,7 @@ The extension currently utilizes a few external dependencies:
 
 - Speech recognition with [annyang](https://github.com/TalAter/annyang).
 
-- Intent engine fuzzy search powered by [fuse](https://fusejs.io/).
+- Fuzzy search powered by [fuse](https://fusejs.io/).
 
 To start up a development environment:
 
