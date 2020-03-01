@@ -31,7 +31,7 @@ Then, load the project directory as an unpacked chrome extension by following th
 
 The following projects would increase accessibility of this tool:
 
-- Sip and Puff Integration
+- [Sip and Puff](https://en.wikipedia.org/wiki/Sip-and-puff) Integration
 - Wakeword detection i.e., "Hey Tulip"
 
 The following improvements would decrease reliance on external third parties:
