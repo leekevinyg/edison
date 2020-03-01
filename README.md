@@ -10,7 +10,7 @@ Tulip is a voice activated web navigation extension for the Chrome browser. The 
 # Development Guide
 
 The architecture was inspired heavily by the [firefox voice](https://github.com/mozilla/firefox-voice) project.
-A detailed overview is available under the [docs]() directory. Each non-trivial file also has a comment section 
+A detailed overview will be available under a [docs]() directory shortly. For now, each non-trivial file has a comment section 
 at the top with a brief overview of the purpose of the file.
 
 The extension currently utilizes a few external dependencies:
@@ -24,7 +24,7 @@ To start up a development environment that runs the unloaded extension, clone th
 * ``` npm install ``` 
 * ``` npm run build ```
 
-Then, load the project directory as an unpacked chrome extension by following the directions [here](https://developer.chrome.com/extensions/getstarted#manifest)
+Then, load the project directory as an unpacked chrome extension by following the directions [here].(https://developer.chrome.com/extensions/getstarted#manifest)
 
 <a name="Future"></a>
 # Improving Accessibility and Future Directions 
