@@ -56,14 +56,14 @@ The following commands are supported.
 
 - Open
     - Opens the first google search result that matches the words spoken after the "open" command.
-    - Examples: "Open Spotify", "Open Youtube", "Open Netflix"
+    - Examples: "Open Spotify", "Open Youtube", "Open Netflix".
 - Click
-    - Clicks an element based off a [fuzzy search](https://en.wikipedia.org/wiki/Approximate_string_matching) of the web page
-    - Example: "Click Sign-In", "Click the title of a video", "Click the title of a news article", "Click a netflix profile"
+    - Tries to click anything that approximately matches the words spoken after the "click" command.
+    - Example: "Click Sign-In", "Click the title of a video", "Click the title of a news article", "Click a netflix profile".
 - Close Tab
     - Closes current tab. Useful if a mistake or unintended tab is opened.
 - Back
-    - Navigates to last visited page in the browser
+    - Navigates to last visited page in the browser.
 - Scroll
     - Scrolls an element based off a fuzzy search of the web page.
     - Example: "Scroll Page Down", "Scroll Page Up", "Scroll Playlist Section", "Scroll Liked Videos"
