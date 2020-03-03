@@ -10,7 +10,13 @@
 import intentParser from './intentEngine/parser.js';
 import intentRunner from './intentEngine/runner.js';
 
-chrome.runtime.onMessage.addListener(async (message) => {
+/**
+ *
+ * @param {object} message
+ * @param {string} message.type
+ * @param {string} message.utterence
+ */
+const processMessage = (message) => {
   const { type, utterence } = message;
   switch (type) {
     case 'runIntent': {
@@ -28,4 +34,6 @@ chrome.runtime.onMessage.addListener(async (message) => {
     default:
       break;
   }
-});
+};
+
+chrome.runtime.onMessage.addListener(processMessage);

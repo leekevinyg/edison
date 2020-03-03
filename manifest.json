@@ -1,13 +1,26 @@
 {
     "name": "Tulip",
-    "version": "1.0",
-    "description": "Handsfree voice activated browsing of Chrome! Special support for Netflix",
+    "version": "0.1",
+    "description": "Voice activated browsing of Chrome.",
     "manifest_version": 2,
-    "permissions": ["declarativeContent", "tabs"],
+    "permissions": [
+        "declarativeContent", 
+        "tabs", 
+        "activeTab"
+    ],
     "background": {
         "page": "background.html",
         "persistent": false
     },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": [
+              "intents/click/fuseClick.js",
+              "vendor/fuse.js"
+          ]
+        }
+    ],
     "browser_action": {
         "default_popup": "popup/popup.html"
     },
