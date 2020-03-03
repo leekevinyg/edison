@@ -15,6 +15,7 @@ const parse = (utterence) => {
         command: 'open',
         detectedKeywords,
       };
+    // TODO: Add grammer to annyang to make "click" easier to detect OR pick a different keyword.
     case 'click':
       return {
         command: 'click',
