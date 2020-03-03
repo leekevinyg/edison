@@ -1,10 +1,10 @@
 /* global chrome */
 
 /**
- * @param {string[]} data An array of keywords
+ * @param {string[]} detectedKeywords An array of keywords
  */
-const open = async (data) => {
-  const query = buildQuery(data);
+const open = async (detectedKeywords) => {
+  const query = buildQuery(detectedKeywords);
   await createTab(`https://www.google.com/search?q=${query}&btnI`);
   /* TODO: Investigate why popup is closing without this message
   chrome.runtime.sendMessage({

@@ -7,9 +7,9 @@ chrome.runtime.onMessage.addListener((request) => {
   }
 });
 
-const clickIfFound = (query) => {
+function clickIfFound(query) {
   const options = getFuseOptions();
-  const searchContent = getFormattedSearchContent();
+  const searchContent = getStructuredSearchContent();
   const fuse = new Fuse(searchContent, options);
   const matches = fuse.search(query);
   if (!matches.length) {

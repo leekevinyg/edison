@@ -5,17 +5,17 @@ import click from '../intents/click/index.js';
  *
  * @param {object} intent
  * @param {string} intent.command
- * @param {string[]} intent.data An array of detected utterences
+ * @param {string[]} intent.detectedKeywords An array of detected utterences
  */
 const run = (intent) => {
-  const { command, data } = intent;
+  const { command, detectedKeywords } = intent;
 
   switch (command) {
     case 'open':
-      open(data);
+      open(detectedKeywords);
       break;
     case 'click':
-      click(data);
+      click(detectedKeywords);
       break;
     default:
       break;

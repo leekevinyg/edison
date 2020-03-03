@@ -2,8 +2,8 @@
 
 import helpers from '../helpers.js';
 
-const click = async (data) => {
-  const query = buildFuseSearchQuery(data);
+const click = async (detectedKeywords) => {
+  const query = buildFuseSearchQuery(detectedKeywords);
   const tab = await getActiveTab();
   // inject our click function and fuzzy search library into the current window
   // FIXME: do not inject into page if the scripts already exist
