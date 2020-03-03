@@ -32,6 +32,7 @@ To start up a development environment:
 Some useful resources:
 
 (1) [Chrome Extension Architecture Overview](https://developer.chrome.com/extensions/overview#arch)
+
 (2) [Chrome Extension Message Passing](https://developer.chrome.com/extensions/messaging)
 
 <a name="Future"></a>
