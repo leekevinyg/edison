@@ -8,8 +8,48 @@ chrome.runtime.onMessage.addListener((request) => {
 });
 
 const clickIfFound = (query) => {
-  // Fuse options
-  const options = {
+  const options = getFuseOptions();
+  const searchContent = getFormattedSearchContent();
+  const fuse = new Fuse(searchContent, options);
+  const matches = fuse.search(query);
+  if (!matches.length) {
+    return false;
+  }
+  let found;
+  for (let i = 0; i < matches.length; i++) {
+    const el = matches[i].item.element;
+    if (isInViewport(el)) {
+      found = el;
+      break;
+    }
+  }
+  if (!found) {
+    found = matches[0].item.element;
+  }
+  highlightElement(found);
+  setTimeout(() => {
+    found.click();
+  }, 100);
+  return true;
+};
+
+function getStructuredSearchContent() {
+  let content = [];
+  const links = findLinks();
+  for (let i = 0; i < links.length; i++) {
+    content.push({
+      element: links[i],
+      text: links[i].innerText,
+      label: links[i].getAttribute('aria-label'),
+      title: links[i].getAttribute('title'),
+      url: links[i].url,
+    });
+  }
+  return content;
+}
+
+function getFuseOptions() {
+  return {
     caseSensitive: false,
     shouldSort: true,
     tokenize: true,
@@ -40,39 +80,7 @@ const clickIfFound = (query) => {
       },
     ],
   };
-  const combinedContent = [];
-  const links = findLinks();
-  for (let i = 0; i < links.length; i++) {
-    combinedContent.push({
-      element: links[i],
-      text: links[i].innerText,
-      label: links[i].getAttribute('aria-label'),
-      title: links[i].getAttribute('title'),
-      url: links[i].url,
-    });
-  }
-  const fuse = new Fuse(combinedContent, options);
-  const matches = fuse.search(query);
-  if (!matches.length) {
-    return false;
-  }
-  let found;
-  for (let i = 0; i < matches.length; i++) {
-    const el = matches[i].item.element;
-    if (isInViewport(el)) {
-      found = el;
-      break;
-    }
-  }
-  if (!found) {
-    found = matches[0].item.element;
-  }
-  highlightElement(found);
-  setTimeout(() => {
-    found.click();
-  }, 100);
-  return true;
-};
+}
 
 function isInViewport(el) {
   const width = window.innerWidth || document.documentElement.clientWidth;
