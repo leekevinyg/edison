@@ -1,6 +1,5 @@
 /* globals chrome */
 
-
 const getActiveTab = async () => new Promise((resolve) => chrome.tabs.query({
   active: true,
   currentWindow: true,
@@ -8,6 +7,7 @@ const getActiveTab = async () => new Promise((resolve) => chrome.tabs.query({
   resolve(tabs[0]);
 }));
 
+// FIXME: only inject script if it hasn't been injected before!
 const lazyInject = async (tabId, scripts) => {
   if (!tabId) {
     throw new Error(`Invalid tabId: ${tabId}`);
