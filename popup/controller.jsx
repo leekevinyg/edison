@@ -36,6 +36,7 @@ const PopupController = () => {
 
     // listen for recorder events, so we can update the user interface.
     recorder.onStart = () => {
+      // FIXME: pause all video
       setCurrentState(STATES.LISTENING);
     };
 
@@ -51,6 +52,7 @@ const PopupController = () => {
         type: 'runIntent',
         utterence: phrases,
       });
+      setTimeout(() => window.close(), 2000);
     };
 
     recorder.startRecording();

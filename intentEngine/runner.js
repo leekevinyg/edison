@@ -1,5 +1,6 @@
 import open from '../intents/open/index.js';
 import click from '../intents/click/index.js';
+import navigation from '../intents/navigation/index.js';
 
 /**
  *
@@ -16,6 +17,18 @@ const run = (intent) => {
       break;
     case 'click':
       click(detectedKeywords);
+      break;
+    case 'back':
+      console.log('trying to run back intent');
+      navigation.back();
+      break;
+    case 'forward':
+      console.log('trying to run forward intent');
+      navigation.forward();
+      break;
+    case 'close':
+      console.log('trying to run close intent');
+      navigation.close();
       break;
     default:
       break;

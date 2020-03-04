@@ -17,6 +17,7 @@ class Recorder {
     annyang.addCallback('start', () => {
       const audio = new Audio('https://mozilla.github.io/firefox-voice/chime.ogg');
       audio.play();
+
       this.onStart();
     });
 
