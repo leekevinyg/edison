@@ -31,10 +31,10 @@ function clickIfFound(query) {
     found.click();
   }, 100);
   return true;
-};
+}
 
 function getStructuredSearchContent() {
-  let content = [];
+  const content = [];
   const links = findLinks();
   for (let i = 0; i < links.length; i++) {
     content.push({

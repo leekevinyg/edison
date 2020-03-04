@@ -1,7 +1,7 @@
 /**
  * This file is responsible for:
  * - Taking a raw utterance received and parsing an actionable intent from it.
- * 
+ *
  */
 
 const parse = (utterence) => {

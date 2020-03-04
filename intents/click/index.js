@@ -4,7 +4,7 @@ import helpers from '../helpers.js';
 
 const click = async (detectedKeywords) => {
   const query = buildFuseSearchQuery(detectedKeywords);
-  const tab = await getActiveTab();
+  const tab = await helpers.getActiveTab();
   // inject our click function and fuzzy search library into the current window
   // FIXME: do not inject into page if the scripts already exist
   await helpers.lazyInject(tab.id, [
@@ -31,12 +31,5 @@ const buildFuseSearchQuery = (keywords) => {
   }
   return query;
 };
-
-const getActiveTab = async () => new Promise((resolve) => chrome.tabs.query({
-  active: true,
-  currentWindow: true,
-}, (tabs) => {
-  resolve(tabs[0]);
-}));
 
 export default click;

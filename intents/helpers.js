@@ -1,6 +1,14 @@
 /* globals chrome */
 
-async function lazyInject(tabId, scripts) {
+
+const getActiveTab = async () => new Promise((resolve) => chrome.tabs.query({
+  active: true,
+  currentWindow: true,
+}, (tabs) => {
+  resolve(tabs[0]);
+}));
+
+const lazyInject = async (tabId, scripts) => {
   if (!tabId) {
     throw new Error(`Invalid tabId: ${tabId}`);
   }
@@ -36,8 +44,9 @@ async function lazyInject(tabId, scripts) {
     // eslint-disable-next-line no-await-in-loop
     await chrome.tabs.executeScript(tabId, { file: scripts[i] });
   }
-}
+};
 
 export default {
   lazyInject,
+  getActiveTab,
 };
