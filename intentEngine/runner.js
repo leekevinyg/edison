@@ -19,15 +19,12 @@ const run = (intent) => {
       click(detectedKeywords);
       break;
     case 'back':
-      console.log('trying to run back intent');
       navigation.back();
       break;
     case 'forward':
-      console.log('trying to run forward intent');
       navigation.forward();
       break;
     case 'close':
-      console.log('trying to run close intent');
       navigation.close();
       break;
     default:
