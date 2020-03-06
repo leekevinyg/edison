@@ -1,7 +1,6 @@
 # Tulip
 
-Tulip is a voice activated web navigation extension for the Chrome browser. The project is still a work in progress, and therefore is not
-yet available on the Chrome Store.
+Tulip is a voice activated web navigation extension for the Chrome browser. The project is still a work in progress, and therefore is not yet available on the Chrome Store.
 
 - <a href="#Developing">Development Guide</a>
 - <a href="#Future">Improving Accessibility and Future Directions</a>
