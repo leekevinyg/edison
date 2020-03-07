@@ -60,7 +60,7 @@ The following commands are supported.
 - Click
     - Tries to click anything that approximately matches the words spoken after the "click" command.
     - Example: "Click Sign-In", "Click the title of a video", "Click the title of a news article", "Click a netflix profile".
-- Close Tab
+- Close
     - Closes current tab. Useful if a mistake or unintended tab is opened.
 - Back
     - Navigates to last visited page in the browser.
