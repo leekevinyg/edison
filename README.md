@@ -14,7 +14,7 @@ Currently, the extension can be triggered by clicking on the extension icon in t
 The following commands are supported.
 
 - Open
-    - Opens the first google search result that matches the words spoken after the "open" command.
+    - Opens the first google search result that best matches the words spoken after the "open" command.
     - Examples: "Open Spotify", "Open Youtube", "Open Netflix".
 - Click
     - Tries to click anything that approximately matches the words spoken after the "click" command.
