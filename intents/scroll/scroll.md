@@ -4,5 +4,7 @@ Tries to scroll up/down, left/right anything that approximately matches the word
 
 <pre>
 Usage: (scroll) [query] [direction]
-Examples: "Scroll Page Down", "Scroll Page Up", "Scroll Crime Movies Left", "Scroll Playlist Section Down"
+The query parameter is optional.
+
+Examples: "Scroll Down", "Scroll Up", "Scroll Crime Movies Left", "Scroll Playlist Section Down"
 </pre>

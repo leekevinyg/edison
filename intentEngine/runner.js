@@ -1,6 +1,7 @@
 import open from '../intents/open/index.js';
 import click from '../intents/click/index.js';
 import navigation from '../intents/navigation/index.js';
+import scroll from '../intents/scroll/index.js';
 
 /**
  *
@@ -17,6 +18,9 @@ const run = (intent) => {
       break;
     case 'click':
       click(detectedKeywords);
+      break;
+    case 'scroll':
+      scroll(detectedKeywords);
       break;
     case 'back':
       navigation.back();

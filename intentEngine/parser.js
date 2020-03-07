@@ -22,6 +22,12 @@ const parse = (utterence) => {
         command,
         detectedKeywords,
       };
+    case 'scroll': {
+      return {
+        command,
+        detectedKeywords,
+      };
+    }
     case 'close':
       return {
         command,
