@@ -17,7 +17,7 @@ const Popup = ({ currentState, transcription }) => {
         <img className={logoClassName} alt="decorative microphone" src="../assets/microphone-logo.svg" />
       </div>
       <div className="status-text">
-        {transcription || currentState}
+        {currentState === 'Sorry, something went wrong. Please try again.' ? currentState : (transcription || currentState)}
       </div>
     </div>
   );
