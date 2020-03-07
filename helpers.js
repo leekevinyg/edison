@@ -45,7 +45,27 @@ const getLoadedScripts = async (tabId) => {
   }
 };
 
+const muteTabs = () => {
+  chrome.tabs.query({ url: [] }, (tabs) => {
+    for (let i = 0; i < tabs.length; i++) {
+      const { mutedInfo } = tabs[i];
+      if (mutedInfo) chrome.tabs.update(tabs[i].id, { muted: true });
+    }
+  });
+};
+
+const unmuteTabs = () => {
+  chrome.tabs.query({ url: [] }, (tabs) => {
+    for (let i = 0; i < tabs.length; i++) {
+      const { mutedInfo } = tabs[i];
+      if (mutedInfo) chrome.tabs.update(tabs[i].id, { muted: false });
+    }
+  });
+};
+
 export default {
   lazyInject,
   getActiveTab,
+  muteTabs,
+  unmuteTabs,
 };

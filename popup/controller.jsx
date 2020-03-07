@@ -13,6 +13,7 @@ import Popup from './view.js';
 import { STATES } from './constants.js';
 import MicrophonePermissions from './microphone-permissions.js';
 import Recorder from './recorder.js';
+import helpers from '../helpers.js';
 
 const { useState, useEffect } = React;
 const popupContainer = document.getElementById('popup-container');
@@ -36,11 +37,11 @@ const PopupController = () => {
 
     // listen for recorder events, so we can update the user interface.
     recorder.onStart = () => {
-      // FIXME: pause all video and audio before starting recorder
       setCurrentState(STATES.LISTENING);
     };
 
     recorder.onEndRecording = async (phrases) => {
+      helpers.unmuteTabs();
       if (!phrases || phrases.length === 0) {
         setCurrentState(STATES.ERROR);
         await new Promise((r) => setTimeout(r, 1500));

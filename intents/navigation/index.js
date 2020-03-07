@@ -1,6 +1,6 @@
 /* globals chrome */
 
-import helpers from '../helpers.js';
+import helpers from '../../helpers.js';
 
 const back = async () => {
   const tab = await helpers.getActiveTab();
