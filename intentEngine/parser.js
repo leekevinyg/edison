@@ -13,7 +13,7 @@ const parse = (utterences) => {
     // more than one possible match to the utterence, pick the best one that we can respond to.
     chosenUtterence = pickBestUtterenceDetected(utterences);
   } else {
-    chosenUtterence = utterences[0];
+    [chosenUtterence] = utterences;
   }
   const detectedKeywords = chosenUtterence.split(' ');
   // for now, the command is the first utterence
