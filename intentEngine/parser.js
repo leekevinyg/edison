@@ -4,8 +4,21 @@
  *
  */
 
-const parse = (utterence) => {
-  const detectedKeywords = utterence[0].split(' ');
+const commands = ['click', 'open', 'close', 'back'];
+
+const parse = (utterences) => {
+  let chosenUtterence = null;
+
+  console.log(`possible utterences: ${utterences}`);
+  // more than one possible match
+  if (utterences.length > 1) {
+    chosenUtterence = pickBestUtterenceDetected(utterences);
+  } else {
+    chosenUtterence = utterences[0];
+  }
+  console.log(`chosen utterence: ${chosenUtterence}`);
+  const detectedKeywords = chosenUtterence.split(' ');
+  console.log(`detected keywords ${detectedKeywords}`);
   // for now, the command is the first utterence
   const command = detectedKeywords[0].toLowerCase();
   detectedKeywords.shift();
@@ -15,7 +28,6 @@ const parse = (utterence) => {
         command,
         detectedKeywords,
       };
-    // TODO: Add grammer to annyang to make "click" easier to detect OR pick a different keyword.
     case 'click':
       return {
         command,
@@ -34,6 +46,17 @@ const parse = (utterence) => {
       break;
   }
   return null;
+};
+
+let pickBestUtterenceDetected = (utterences) => {
+  for (let i = 0; i < utterences.length; i++) {
+    const currentUtterence = utterences[i];
+    const currentCommand = currentUtterence.split(' ')[0].toLowerCase();
+    if (commands.includes(currentCommand)) {
+      return currentUtterence;
+    }
+  }
+  return utterences[0];
 };
 
 export default {
