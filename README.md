@@ -3,6 +3,7 @@
 Tulip is a voice activated web navigation extension for the Chrome browser. The project is still a work in progress.
 
 - <a href="#UserGuide">User Guide</a>
+- <a href="#Feedback">Feedback</a>
 - <a href="#Future">Improving Accessibility and Future Directions</a>
 - <a href="#Developing">Development Guide</a>
 
@@ -25,11 +26,17 @@ The following commands are supported.
     - Navigates to last visited page in the browser.
 - Scroll
     - Scrolls an element based off a fuzzy search of the web page.
-    - Example: "Scroll Page Down", "Scroll Page Up", "Scroll Playlist Section", "Scroll Liked Videos"
+    - Example: "Scroll Page Down", "Scroll Page Up", "Scroll Playlist Section Down", "Scroll Liked Videos Down", 
+    "Scroll Crime Movies Right", "Scroll Page Left"
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
 
 For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
+
+<a name="Feedback"></a>
+# Suggestions and Feedback
+
+If anything doesn't work as expected, or if you have any suggestions, please feel free to file an issue [here](https://github.com/leekevinyg/tulip-web/issues/new).
 
 <a name="Future"></a>
 # Improving Accessibility and Future Directions 
