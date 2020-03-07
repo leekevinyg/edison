@@ -67,13 +67,6 @@ The following commands are supported.
 - Scroll
     - Scrolls an element based off a fuzzy search of the web page.
     - Example: "Scroll Page Down", "Scroll Page Up", "Scroll Playlist Section", "Scroll Liked Videos"
-- Focus Input 
-    - Focuses an input based off a fuzzy search of the web page.
-    - Example: "Focus password field", "Focus search field"
-- Dictate
-    - Dictate into currently focused textfield or input area.
-- Play/Pause/Fast Forward Media
-    - Supported services include Netflix, Youtube and Spotify.
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
 
