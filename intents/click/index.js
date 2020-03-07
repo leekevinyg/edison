@@ -2,6 +2,10 @@
 
 import helpers from '../../helpers.js';
 
+/**
+ *
+ * @param {string[]} detectedKeywords
+ */
 const click = async (detectedKeywords) => {
   const query = buildFuseSearchQuery(detectedKeywords);
   const tab = await helpers.getActiveTab();

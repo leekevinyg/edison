@@ -6,16 +6,8 @@
 
 const commands = ['click', 'open', 'close', 'back', 'forward'];
 
-const parse = (utterences) => {
-  let chosenUtterence = null;
-
-  if (utterences.length > 1) {
-    // more than one possible match to the utterence, pick the best one that we can respond to.
-    chosenUtterence = pickBestUtterenceDetected(utterences);
-  } else {
-    [chosenUtterence] = utterences;
-  }
-  const detectedKeywords = chosenUtterence.split(' ');
+const parse = (utterence) => {
+  const detectedKeywords = utterence.split(' ');
   // for now, the command is the first utterence
   const command = detectedKeywords[0].toLowerCase();
   detectedKeywords.shift();
@@ -50,7 +42,7 @@ const parse = (utterences) => {
   return null;
 };
 
-let pickBestUtterenceDetected = (utterences) => {
+const pickBestUtterenceDetected = (utterences) => {
   for (let i = 0; i < utterences.length; i++) {
     const currentUtterence = utterences[i];
     const currentCommand = currentUtterence.split(' ')[0].toLowerCase();
@@ -63,4 +55,5 @@ let pickBestUtterenceDetected = (utterences) => {
 
 export default {
   parse,
+  pickBestUtterenceDetected,
 };

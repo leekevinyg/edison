@@ -14,6 +14,7 @@ import { STATES } from './constants.js';
 import MicrophonePermissions from './microphone-permissions.js';
 import Recorder from './recorder.js';
 import helpers from '../helpers.js';
+import parser from '../intentEngine/parser.js';
 
 const { useState, useEffect } = React;
 const popupContainer = document.getElementById('popup-container');
@@ -47,11 +48,12 @@ const PopupController = () => {
         await new Promise((r) => setTimeout(r, 1500));
         window.close();
       }
-      setTranscription(phrases);
+      const utterence = parser.pickBestUtterenceDetected(phrases);
+      setTranscription(utterence);
       // fire intent off to intent engine
       chrome.runtime.sendMessage({
         type: 'runIntent',
-        utterence: phrases,
+        utterence,
       });
       setTimeout(() => window.close(), 2000);
     };

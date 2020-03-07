@@ -14,7 +14,7 @@ const Popup = ({ currentState, transcription }) => {
   return (
     <div className="popup-wrapper">
       <div className="microphone">
-        <img className={logoClassName} alt='decorative microphone' src="../assets/microphone-logo.svg" />
+        <img className={logoClassName} alt="decorative microphone" src="../assets/microphone-logo.svg" />
       </div>
       <div className="status-text">
         {transcription || currentState}

@@ -6,11 +6,6 @@
 const open = async (detectedKeywords) => {
   const query = buildQuery(detectedKeywords);
   await createTab(`https://www.google.com/search?q=${query}&btnI`);
-  /* TODO: Investigate why popup is closing without this message
-  chrome.runtime.sendMessage({
-    type: 'intentSuccesful',
-  });
-  */
 };
 
 /**

@@ -12,6 +12,11 @@ this.communicate = (function () {
     HANDLERS[action] = handler;
   };
 
+  /**
+   * @param {string} action.name the name of the command to execute
+   * @param {string} action.param the parameter (usually a query) that should be passed to the
+   * command handler.
+   */
   exports.handle = function (action) {
     const { name, param } = action;
     HANDLERS[name](param);

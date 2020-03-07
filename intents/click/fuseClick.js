@@ -5,6 +5,10 @@ this.click = (function () {
     clickIfFound(query.trim());
   });
 
+  /**
+   *
+   * @param {string} query
+   */
   function clickIfFound(query) {
     const options = getFuseOptions();
     const searchContent = getStructuredSearchContent();
