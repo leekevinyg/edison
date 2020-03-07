@@ -16,16 +16,22 @@ The following commands are supported.
 
 - Open
     - Opens the first google search result that best matches the words spoken after the "open" command.
+    - Usage: (open) [query]
     - Examples: "Open Spotify", "Open Youtube", "Open Netflix".
 - Click
     - Tries to click anything that approximately matches the words spoken after the "click" command.
+    - Usage: (click) [query]
     - Example: "Click Sign-In", "Click the title of a video", "Click the title of a news article", "Click a netflix profile".
 - Close
     - Closes current tab. Useful if a mistake or unintended tab is opened.
+    - Usage: Just say "Close"
 - Back
     - Navigates to last visited page in the browser.
+    - Usage: Just say "Back"
 - Scroll
     - Scrolls an element based off a fuzzy search of the web page.
+    - Usage: (scroll) [query] [direction]
+    - The direction paramter can be any of up/down/left/right
     - Example: "Scroll Page Down", "Scroll Page Up", "Scroll Playlist Section Down", "Scroll Liked Videos Down", 
     "Scroll Crime Movies Right", "Scroll Page Left"
 
