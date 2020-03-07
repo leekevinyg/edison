@@ -9,16 +9,13 @@ const commands = ['click', 'open', 'close', 'back'];
 const parse = (utterences) => {
   let chosenUtterence = null;
 
-  console.log(`possible utterences: ${utterences}`);
-  // more than one possible match
   if (utterences.length > 1) {
+    // more than one possible match to the utterence, pick the best one that we can respond to.
     chosenUtterence = pickBestUtterenceDetected(utterences);
   } else {
     chosenUtterence = utterences[0];
   }
-  console.log(`chosen utterence: ${chosenUtterence}`);
   const detectedKeywords = chosenUtterence.split(' ');
-  console.log(`detected keywords ${detectedKeywords}`);
   // for now, the command is the first utterence
   const command = detectedKeywords[0].toLowerCase();
   detectedKeywords.shift();
