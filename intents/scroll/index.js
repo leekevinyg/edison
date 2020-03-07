@@ -45,6 +45,4 @@ const getScrollDirection = (detectedKeywords) => {
   return 'Down';
 };
 
-export default {
-  scroll,
-};
+export default scroll;
