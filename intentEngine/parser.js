@@ -4,7 +4,7 @@
  *
  */
 
-const commands = ['click', 'open', 'close', 'back'];
+const commands = ['click', 'open', 'close', 'back', 'forward'];
 
 const parse = (utterences) => {
   let chosenUtterence = null;

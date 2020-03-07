@@ -16,8 +16,10 @@
         {
           "matches": ["<all_urls>"],
           "js": [
-              "intents/click/fuseClick.js",
-              "vendor/fuse.js"
+            "communication/communication.js",
+            "vendor/fuse.js",
+            "intents/click/fuseClick.js",
+            "communication/responder.js"
           ]
         }
     ],

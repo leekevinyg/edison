@@ -27,5 +27,6 @@ module.exports = {
     "import/extensions": "off",
     "no-plusplus": "off",
     "class-methods-use-this": "off",
+    "func-names": "off",
   },
 };

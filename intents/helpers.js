@@ -7,42 +7,41 @@ const getActiveTab = async () => new Promise((resolve) => chrome.tabs.query({
   resolve(tabs[0]);
 }));
 
-// FIXME: only inject script if it hasn't been injected before!
 const lazyInject = async (tabId, scripts) => {
   if (!tabId) {
     throw new Error(`Invalid tabId: ${tabId}`);
   }
-  if (typeof scripts === 'string') {
-    scripts = [scripts]; // eslint-disable-line no-param-reassign
-  }
-  const scriptKey = scripts.join(',');
-  let available = true;
-  try {
-    available = await chrome.tabs.sendMessage(tabId, {
-      type: 'ping',
-      scriptKey,
-    });
-    if (!available) {
-      available = 'some';
-    }
-  } catch (e) {
-    throw new Error(`could not send message to tab ${tabId}`);
-  }
-  if (available === 'some') {
-    for (let i = 0; i < scripts.length; i++) {
-      await chrome.tabs.executeScript(tabId, { // eslint-disable-line no-await-in-loop
-        file: scripts[i],
-        runAt: 'document_idle',
+  const injectedScripts = [
+    'communication/communication.js',
+  ].concat(scripts).concat(
+    'communication/responder.js',
+  );
+  const loadedScripts = await getLoadedScripts(tabId);
+  for (let i = 0; i < injectedScripts.length; i++) {
+    if (!loadedScripts || !loadedScripts[injectedScripts[i]]) {
+      // eslint-disable-next-line no-await-in-loop
+      await chrome.tabs.executeScript(tabId, { file: injectedScripts[i] });
+      chrome.tabs.sendMessage(tabId, {
+        type: 'scriptsLoaded',
+        scriptKey: injectedScripts[i],
       });
     }
-    return;
   }
-  if (available) {
-    return;
-  }
-  for (let i = 0; i < scripts.length; i++) {
-    // eslint-disable-next-line no-await-in-loop
-    await chrome.tabs.executeScript(tabId, { file: scripts[i] });
+};
+
+const getLoadedScripts = async (tabId) => {
+  try {
+    return new Promise((resolve) => chrome.tabs.sendMessage(tabId, {
+      type: 'getLoadedScripts',
+    }, (response) => {
+      if (response && response.loadedScripts) {
+        resolve(response.loadedScripts);
+      } else {
+        resolve(null);
+      }
+    }));
+  } catch (e) {
+    return null;
   }
 };
 
