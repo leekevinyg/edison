@@ -39,6 +39,11 @@ const parse = (utterences) => {
         command,
       };
     }
+    case 'forward': {
+      return {
+        command,
+      };
+    }
     default:
       break;
   }
