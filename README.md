@@ -3,8 +3,8 @@
 Tulip is a voice activated web navigation extension for the Chrome browser. The project is still a work in progress.
 
 - <a href="#UserGuide">User Guide</a>
-- <a href="#Feedback">Feedback</a>
 - <a href="#Future">Improving Accessibility and Future Directions</a>
+- <a href="#Feedback">Feedback</a>
 - <a href="#Developing">Development Guide</a>
 
 <a name="UserGuide"></a>
@@ -39,11 +39,6 @@ Note that the interface currently handles *one command at a time*, therefore, ea
 
 For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
 
-<a name="Feedback"></a>
-# Suggestions and Feedback
-
-If anything doesn't work as expected, or if you have any suggestions, please feel free to file an issue [here](https://github.com/leekevinyg/tulip-web/issues/new).
-
 <a name="Future"></a>
 # Improving Accessibility and Future Directions 
 
@@ -56,6 +51,11 @@ The following improvements would decrease reliance on external third parties:
 
 - Development of our own custom deep speech recognition server
 - Development of our own voice activity detection algorithms
+
+<a name="Feedback"></a>
+# Suggestions and Feedback
+
+If anything doesn't work as expected, or if you have any suggestions, please feel free to file an issue [here](https://github.com/leekevinyg/tulip-web/issues/new).
 
 <a name="Developing"></a>
 # Development Guide
