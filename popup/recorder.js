@@ -10,7 +10,6 @@ import helpers from '../helpers.js';
 
 class Recorder {
   startRecording() {
-    /*
     annyang.start({
       autoRestart: false,
       continuous: false, // will turn off automatically when speech stops
@@ -29,7 +28,6 @@ class Recorder {
     window.addEventListener('unload', () => {
       annyang.removeCallback();
     });
-    */
   }
 
   onStart() {
