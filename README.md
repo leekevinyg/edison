@@ -2,12 +2,16 @@
 
 Tulip is a voice activated web navigation extension for the Chrome browser.
 
-[![YOUTUBE DEMO](https://img.youtube.com/vi/Il0RF0RZK28/0.jpg)](https://www.youtube.com/watch?v=Il0RF0RZK28)
-
+- <a href="#Demo">Demo</a>
 - <a href="#UserGuide">User Guide</a>
 - <a href="#Future">Improving Accessibility and Future Directions</a>
 - <a href="#Developing">Development Guide</a>
 - <a href="#Feedback">Feedback</a>
+
+<a name="Demo"></a>
+# Demo
+
+[![YOUTUBE DEMO](https://img.youtube.com/vi/Il0RF0RZK28/0.jpg)](https://www.youtube.com/watch?v=Il0RF0RZK28)
 
 <a name="UserGuide"></a>
 # User Guide
