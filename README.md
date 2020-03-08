@@ -38,7 +38,7 @@ The following commands are supported.
     - Scrolls the page up/down/left/right
     - Usage: (scroll) [direction]
     - Example: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right"
-- Media Controls
+- Media Controls for Video
     - Plays or pauses the video in the current tab.
     - Usage: "Play", "Pause"
 
