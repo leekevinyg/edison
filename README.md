@@ -33,10 +33,8 @@ The following commands are supported.
     - Usage: (scroll) [direction]
     - Example: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right"
 - Media Controls
-    - Play/Pause/Rewind/Skip
-    - Usage: Just say any of the commands above
-    - Example: "Play", "Pause", "Skip" (fast forward), "Rewind"
-    - Note: Rewind and Skip commands are currently only supported on Netflix.
+    - Plays or pauses the video in the current tab.
+    - Usage: "Play", "Pause"
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
 

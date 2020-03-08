@@ -1,0 +1,46 @@
+body {
+    background-color: #EDD382
+}
+.permission-error {
+    text-align: center;
+    font-size: large;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    height: 50px;
+}
+
+.error-message {
+    display: inline-block;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.welcome {
+    text-align: center;
+    font-size: large;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-message {
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
