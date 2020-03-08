@@ -29,11 +29,14 @@ The following commands are supported.
     - Navigates to last visited page in the browser.
     - Usage: Just say "Back"
 - Scroll
-    - Scrolls an element based off a fuzzy search of the web page.
-    - Usage: (scroll) [query] [direction]
-    - The direction paramter can be any of up/down/left/right
-    - Example: "Scroll Page Down", "Scroll Page Up", "Scroll Playlist Section Down", "Scroll Liked Videos Down", 
-    "Scroll Crime Movies Right", "Scroll Page Left"
+    - Scrolls the page up/down/left/right
+    - Usage: (scroll) [direction]
+    - Example: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right"
+- Media Controls
+    - Play/Pause/Rewind/Skip
+    - Usage: Just say any of the commands above
+    - Example: "Play", "Pause", "Skip" (fast forward), "Rewind"
+    - Note: Rewind and Skip commands are currently only supported on Netflix.
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
 
