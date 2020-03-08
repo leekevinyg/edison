@@ -2,6 +2,7 @@ import open from '../intents/open/index.js';
 import click from '../intents/click/index.js';
 import navigation from '../intents/navigation/index.js';
 import scroll from '../intents/scroll/index.js';
+import handleMediaCommand from '../intents/media/index.js';
 
 /**
  *
@@ -30,6 +31,12 @@ const run = (intent) => {
       break;
     case 'close':
       navigation.close();
+      break;
+    case 'rewind':
+    case 'skip':
+    case 'play':
+    case 'pause':
+      handleMediaCommand(command);
       break;
     default:
       break;

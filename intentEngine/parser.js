@@ -4,7 +4,8 @@
  *
  */
 
-const commands = ['click', 'open', 'close', 'back', 'forward'];
+const commands = ['click', 'open', 'close', 'back', 'forward', 'scroll', 'play', 'rewind',
+  'skip', 'pause'];
 
 const parse = (utterence) => {
   const detectedKeywords = utterence.split(' ');
@@ -13,15 +14,7 @@ const parse = (utterence) => {
   detectedKeywords.shift();
   switch (command) {
     case 'open':
-      return {
-        command,
-        detectedKeywords,
-      };
     case 'click':
-      return {
-        command,
-        detectedKeywords,
-      };
     case 'scroll': {
       return {
         command,
@@ -29,15 +22,12 @@ const parse = (utterence) => {
       };
     }
     case 'close':
-      return {
-        command,
-      };
-    case 'back': {
-      return {
-        command,
-      };
-    }
-    case 'forward': {
+    case 'back':
+    case 'forward':
+    case 'play':
+    case 'pause':
+    case 'rewind':
+    case 'skip': {
       return {
         command,
       };

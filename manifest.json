@@ -20,7 +20,8 @@
             "vendor/fuse.js",
             "intents/click/fuseClick.js",
             "communication/responder.js",
-            "intents/scroll/fuseScroll.js"
+            "intents/scroll/fuseScroll.js",
+            "intents/media/media.js"
           ]
         }
     ],
