@@ -32,11 +32,11 @@ Examples: "Click Sign-In", "Click the title of a video", "Click a Netflix profil
 Closes current tab. Useful if a mistake or unintended tab is opened.  
 Example: Just say "Close".
 
-- **Back**
+- **Back**  
 Navigates to last visited page in the browser.  
 Example: Just say "Back".
 
-- **Scroll** 
+- **Scroll**  
 Scrolls the page up/down/left/right.  
 Examples: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right".
 
