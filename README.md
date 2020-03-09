@@ -27,7 +27,9 @@ Opens the first google search result that best matches the words spoken after th
 Examples: "Open Spotify", "Open Youtube", "Open Netflix".
 
 - Click
+
 Tries to click anything that approximately matches the words spoken after the "click" command.
+
 Examples: "Click Sign-In", "Click the title of a video", "Click a Netflix profile".
 
 - Close
