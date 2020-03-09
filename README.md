@@ -20,10 +20,8 @@ Currently, the extension can be triggered by clicking on the extension icon in t
 
 The following commands are supported:
 
-- Open
-
-Opens the first google search result that best matches the words spoken after the "open" command.
-
+- Open  
+Opens the first google search result that best matches the words spoken after the "open" command.  
 Examples: "Open Spotify", "Open Youtube", "Open Netflix".
 
 - Click  
