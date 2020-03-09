@@ -48,11 +48,11 @@ The following commands are specific to Netflix:
 
 - **Rewind**  
 Rewinds the current Netflix title by 10 seconds.  
-Example: Just say "Rewind" when viewing a netflix title.
+Example: Just say "Rewind" when viewing a Netflix title.
 
-- **Skip**
+- **Skip**  
 Fast forwards the Netflix title by 10 seconds.  
-Example: Just say "Skip" when viewing a movie.
+Example: Just say "Skip" when viewing a Netflix title.
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
 
