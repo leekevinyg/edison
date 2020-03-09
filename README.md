@@ -21,7 +21,9 @@ Currently, the extension can be triggered by clicking on the extension icon in t
 The following commands are supported:
 
 - Open
+
 Opens the first google search result that best matches the words spoken after the "open" command.
+
 Examples: "Open Spotify", "Open Youtube", "Open Netflix".
 
 - Click
@@ -29,20 +31,28 @@ Tries to click anything that approximately matches the words spoken after the "c
 Examples: "Click Sign-In", "Click the title of a video", "Click a Netflix profile".
 
 - Close
+
 Closes current tab. Useful if a mistake or unintended tab is opened.
+
 Example: Just say "Close"
 
 - Back
+
 Navigates to last visited page in the browser.
+
 Example: Just say "Back"
 
 - Scroll
+
 Scrolls the page up/down/left/right
+
 Examples: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right"
 
 - Media Controls for video
+
 Plays or pauses the video in the current tab.
-Example: Just say "Play", "Pause" when viewing a video
+
+Example: Just say "Play" or "Pause" when viewing a video
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
 
