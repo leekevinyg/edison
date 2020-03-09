@@ -26,35 +26,25 @@ Opens the first google search result that best matches the words spoken after th
 
 Examples: "Open Spotify", "Open Youtube", "Open Netflix".
 
-- Click
-
-Tries to click anything that approximately matches the words spoken after the "click" command.
-
+- Click  
+Tries to click anything that approximately matches the words spoken after the "click" command.  
 Examples: "Click Sign-In", "Click the title of a video", "Click a Netflix profile".
 
-- Close
+- Close  
+Closes current tab. Useful if a mistake or unintended tab is opened.  
+Example: Just say "Close".
 
-Closes current tab. Useful if a mistake or unintended tab is opened.
+- Back  
+Navigates to last visited page in the browser.  
+Example: Just say "Back".
 
-Example: Just say "Close"
+- Scroll  
+Scrolls the page up/down/left/right.  
+Examples: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right".
 
-- Back
-
-Navigates to last visited page in the browser.
-
-Example: Just say "Back"
-
-- Scroll
-
-Scrolls the page up/down/left/right
-
-Examples: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right"
-
-- Media Controls for video
-
-Plays or pauses the video in the current tab.
-
-Example: Just say "Play" or "Pause" when viewing a video
+- Media Controls for video  
+Plays or pauses the video in the current tab.  
+Example: Just say "Play" or "Pause" when viewing a video.
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
 
