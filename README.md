@@ -20,7 +20,7 @@ Currently, the extension can be triggered by clicking on the extension icon in t
 
 The following commands are supported:
 
-- **Open** 
+- **Open**  
 Opens the first google search result that best matches the words spoken after the "open" command.  
 Examples: "Open Spotify", "Open Youtube", "Open Netflix".
 
@@ -40,7 +40,7 @@ Example: Just say "Back".
 Scrolls the page up/down/left/right.  
 Examples: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right".
 
-- **Media Controls for Video**
+- **Media Controls for Video**  
 Plays or pauses the video in the current tab.  
 Example: Just say "Play" or "Pause" when viewing a video.
 
@@ -92,4 +92,4 @@ Some useful resources:
 <a name="Feedback"></a>
 # Suggestions and Feedback
 
-If anything doesn't work as expected, or if you have any suggestions, please feel free to file an issue [here](https://github.com/leekevinyg/tulip-web/issues/new).
+If you have any ideas on how to improve the tool, or encounter any behaviour that is unexpected, please feel free to file an issue [here](https://github.com/leekevinyg/tulip-web/issues/new).
