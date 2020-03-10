@@ -1,40 +1,58 @@
 # Tulip
 
-Tulip is a voice activated web navigation extension for the Chrome browser. The project is still a work in progress.
+Tulip is a voice activated web navigation extension for the Chrome browser.
 
+- <a href="#Demo">Demo</a>
 - <a href="#UserGuide">User Guide</a>
 - <a href="#Future">Improving Accessibility and Future Directions</a>
 - <a href="#Developing">Development Guide</a>
 - <a href="#Feedback">Feedback</a>
+
+<a name="Demo"></a>
+# Demo
+
+[![YOUTUBE DEMO](https://img.youtube.com/vi/Il0RF0RZK28/0.jpg)](https://www.youtube.com/watch?v=Il0RF0RZK28)
 
 <a name="UserGuide"></a>
 # User Guide
 
 Currently, the extension can be triggered by clicking on the extension icon in the top right of the chrome toolbar or by hitting "Command+Shift+O" on a Mac or "Ctrl+Shift+O" on Windows.
 
-The following commands are supported.
+The following commands are supported:
 
-- Open
-    - Opens the first google search result that best matches the words spoken after the "open" command.
-    - Usage: (open) [query]
-    - Examples: "Open Spotify", "Open Youtube", "Open Netflix".
-- Click
-    - Tries to click anything that approximately matches the words spoken after the "click" command.
-    - Usage: (click) [query]
-    - Example: "Click Sign-In", "Click the title of a video", "Click the title of a news article", "Click a netflix profile".
-- Close
-    - Closes current tab. Useful if a mistake or unintended tab is opened.
-    - Usage: Just say "Close"
-- Back
-    - Navigates to last visited page in the browser.
-    - Usage: Just say "Back"
-- Scroll
-    - Scrolls the page up/down/left/right
-    - Usage: (scroll) [direction]
-    - Example: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right"
-- Media Controls
-    - Plays or pauses the video in the current tab.
-    - Usage: "Play", "Pause"
+- **Open**  
+Opens the first google search result that best matches the words spoken after the "open" command.  
+Examples: "Open Spotify", "Open Youtube", "Open Netflix".
+
+- **Click**  
+Tries to click anything that approximately matches the words spoken after the "click" command.  
+Examples: "Click Sign-In", "Click the title of a video", "Click a Netflix profile".
+
+- **Close**  
+Closes current tab. Useful if a mistake or unintended tab is opened.  
+Example: Just say "Close".
+
+- **Back**  
+Navigates to last visited page in the browser.  
+Example: Just say "Back".
+
+- **Scroll**  
+Scrolls the page up/down/left/right.  
+Examples: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right".
+
+- **Media Controls for Video**  
+Plays or pauses the video in the current tab.  
+Example: Just say "Play" or "Pause" when viewing a video.
+
+The following commands are specific to Netflix:  
+
+- **Rewind**  
+Rewinds the current Netflix title by 10 seconds.  
+Example: Just say "Rewind" when viewing a Netflix title.
+
+- **Skip**  
+Fast forwards the Netflix title by 10 seconds.  
+Example: Just say "Skip" when viewing a Netflix title.
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
 
@@ -48,10 +66,12 @@ The following projects would increase accessibility of this tool:
 - [Sip and Puff](https://en.wikipedia.org/wiki/Sip-and-puff) Integration
 - Wakeword detection i.e., "Hey Tulip"
 
-The following improvements would decrease reliance on external third parties:
+As of March 2020, the current limits and quotas for the [Web Speech API](https://wicg.github.io/speech-api/) are unclear. Therefore, the following improvements would increase the stability of the project moving forward:
 
-- Development of our own custom deep speech recognition server
-- Development of our own voice activity detection algorithms
+- Hosting our own deep speech recognition server, like [Mozilla Deep Speech](https://github.com/mozilla/DeepSpeech)
+- Moving towards a more stable paid service with clearly defined speech recognition quotas, like [PicoVoice](https://picovoice.ai/) or the official [Google Speech-to-Text Engine](https://cloud.google.com/speech-to-text/docs)
+
+Furthermore, to increase extensibility, it may be worthwhile to expose an API for this extension that would allow developers to load custom voice commands.
 
 <a name="Developing"></a>
 # Development Guide
@@ -84,4 +104,4 @@ Some useful resources:
 <a name="Feedback"></a>
 # Suggestions and Feedback
 
-If anything doesn't work as expected, or if you have any suggestions, please feel free to file an issue [here](https://github.com/leekevinyg/tulip-web/issues/new).
+If you have any ideas on how to improve the tool, or encounter any behaviour that is unexpected, please feel free to file an issue [here](https://github.com/leekevinyg/tulip-web/issues/new).
