@@ -66,10 +66,10 @@ The following projects would increase accessibility of this tool:
 - [Sip and Puff](https://en.wikipedia.org/wiki/Sip-and-puff) Integration
 - Wakeword detection i.e., "Hey Tulip"
 
-As of March 2020, the current limits and quotas for the [Web Speech API](https://wicg.github.io/speech-api/) are unclear. Therefore, the following improvements would increase the stability of the project:
+As of March 2020, the current limits and quotas for the [Web Speech API](https://wicg.github.io/speech-api/) are unclear. Therefore, the following improvements would increase the stability of the project moving forward:
 
 - Hosting our own deep speech recognition server, like [Mozilla Deep Speech](https://github.com/mozilla/DeepSpeech)
-- Move towards a more stable paid service with clearly defined speech recognition quotas, like [PicoVoice](https://picovoice.ai/) or the official [Google Speech-to-Text Engine](https://cloud.google.com/speech-to-text/docs)
+- Moving towards a more stable paid service with clearly defined speech recognition quotas, like [PicoVoice](https://picovoice.ai/) or the official [Google Speech-to-Text Engine](https://cloud.google.com/speech-to-text/docs)
 
 Furthermore, to increase extensibility, it may be worthwhile to expose an API for this extension that would allow developers to load custom voice commands.
 
