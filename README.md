@@ -1,9 +1,10 @@
 # Tulip
 
-Tulip is a voice activated web navigation extension for the Chrome browser. It is available in the chrome store [here](https://chrome.google.com/webstore/detail/tulip/cjedgkiefphilnnkgmpakjdjehjjgaef)
+Tulip is a voice activated web navigation extension for the Chrome browser.
 
 - <a href="#Demo">Demo</a>
 - <a href="#UserGuide">User Guide</a>
+- <a href="#Download">Download</a>
 - <a href="#Future">Improving Accessibility and Future Directions</a>
 - <a href="#Developing">Development Guide</a>
 - <a href="#Feedback">Feedback</a>
@@ -57,6 +58,11 @@ Example: Just say "Skip" when viewing a Netflix title.
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
 
 For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
+
+<a name="Download"></a>
+# Download
+
+You can download the extension from the chrome store [here](https://chrome.google.com/webstore/detail/tulip/cjedgkiefphilnnkgmpakjdjehjjgaef).
 
 <a name="Future"></a>
 # Improving Accessibility and Future Directions 
