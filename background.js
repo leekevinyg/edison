@@ -7,6 +7,7 @@
  *
  */
 
+import BumbleBee from './vendor/bumblebee/bumblebee.js';
 import intentParser from './intentEngine/parser.js';
 import intentRunner from './intentEngine/runner.js';
 
@@ -37,3 +38,12 @@ const processMessage = (message) => {
 };
 
 chrome.runtime.onMessage.addListener(processMessage);
+
+let bumblebee = new BumbleBee();
+bumblebee.setWorkersPath('vendor/bumblebee/workers');
+bumblebee.addHotword('bumblebee');
+bumblebee.setSensitivity(0.5);
+bumblebee.on('hotword', function(hotword) {
+  chrome.tabs.create( {url:"../popup/popup.html"} );
+});
+bumblebee.start();
