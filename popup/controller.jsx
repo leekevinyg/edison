@@ -5,8 +5,7 @@
  *   - Starting the microphone stream
  *   - Receiving microphone status and displaying it to the user
  *   - Receiving command transcription and displaying it to the user
- *   - Sending intent request to background script
- *   - Receiving result of intent request from background script
+ *   - Running the parsed command
 */
 
 import Popup from './view.js';
@@ -54,29 +53,6 @@ const PopupController = () => {
     };
 
     recorder.startRecording();
-    // listen for results of our commands
-    chrome.runtime.onMessage.addListener(handleMessage);
-  };
-
-  // handle the results of our intents
-  const handleMessage = async (message) => {
-    switch (message.type) {
-      case 'intentSuccessful': {
-        setCurrentState(STATES.SUCCESS);
-        await new Promise((r) => setTimeout(r, 1500));
-        window.close();
-        break;
-      }
-      case 'intentError': {
-        setCurrentState(STATES.ERROR);
-        await new Promise((r) => setTimeout(r, 1500));
-        window.close();
-        break;
-      }
-      default:
-        break;
-    }
-    return undefined;
   };
 
   return (

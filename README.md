@@ -1,6 +1,6 @@
-# Tulip
+# Edison
 
-Tulip is a voice activated web navigation extension for the Chrome browser.
+Edison is a voice activated web navigation extension for the Chrome browser.
 
 - <a href="#Demo">Demo</a>
 - <a href="#Download">Download</a>
@@ -22,7 +22,9 @@ You can download the extension from the chrome store [here](https://chrome.googl
 <a name="UserGuide"></a>
 # User Guide
 
-Currently, the extension can be triggered by clicking on the extension icon in the top right of the chrome toolbar or by hitting "Command+Shift+O" on a Mac or "Ctrl+Shift+O" on Windows.
+The extension can be triggered by clicking on the extension icon in the top right of the chrome toolbar or by hitting "Command+Shift+O" on a Mac or "Ctrl+Shift+O" on Windows.
+
+Alternatively, the wakeword "Hey Edison" is available for a completely handsfree experience.
 
 The following commands are supported:
 
@@ -67,12 +69,7 @@ For accessibility use cases, it is recommended that passwords be saved for the m
 <a name="Future"></a>
 # Improving Accessibility and Future Directions 
 
-The following projects would increase accessibility of this tool:
-
-- [Sip and Puff](https://en.wikipedia.org/wiki/Sip-and-puff) Integration
-- Wakeword detection i.e., "Hey Tulip"
-
-As of March 2020, the current limits and quotas for the [Web Speech API](https://wicg.github.io/speech-api/) are unclear. Therefore, the following improvements would increase the stability of the project moving forward:
+As of April 2020, the current limits and quotas for the [Web Speech API](https://wicg.github.io/speech-api/) are unclear. Therefore, the following improvements would increase the stability of the project moving forward:
 
 - Hosting our own deep speech recognition server, like [Mozilla Deep Speech](https://github.com/mozilla/DeepSpeech)
 - Moving towards a more stable paid service with clearly defined speech recognition quotas, like [PicoVoice](https://picovoice.ai/) or the official [Google Speech-to-Text Engine](https://cloud.google.com/speech-to-text/docs)
@@ -90,6 +87,8 @@ The extension currently utilizes a few external dependencies:
 - Speech recognition with [annyang](https://github.com/TalAter/annyang).
 
 - Fuzzy search powered by [fuse](https://fusejs.io/).
+
+- Wakeword detection powered by [bumblebee](https://github.com/jaxcore/bumblebee-hotword).
 
 To start up a development environment:
 

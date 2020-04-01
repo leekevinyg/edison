@@ -1,6 +1,6 @@
 {
-    "name": "Tulip",
-    "version": "0.2",
+    "name": "Edison",
+    "version": "1.0",
     "description": "Voice activated browsing of Chrome.",
     "manifest_version": 2,
     "permissions": [

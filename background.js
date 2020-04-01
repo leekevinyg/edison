@@ -31,7 +31,6 @@ initializeHotWordDetection();
 bumblebee.on('hotword', () => {
   MicrophonePermissions.request();
   const recorder = new Recorder();
-  setTimeout(endCommandDetection, TIMEOUTS.WAIT_FOR_COMMAND);
   recorder.onEndRecording = (phrases) => {
     if (!phrases || phrases.length === 0) {
       const msg = new SpeechSynthesisUtterance(STATES.ERROR);
@@ -47,6 +46,7 @@ bumblebee.on('hotword', () => {
     endCommandDetection();
   };
   recorder.startRecording();
+  setTimeout(endCommandDetection, TIMEOUTS.WAIT_FOR_COMMAND);
 });
 
 bumblebee.start();
