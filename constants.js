@@ -8,4 +8,5 @@ export const STATES = {
 
 export const TIMEOUTS = {
   PERMISSION_REQUEST: 2000,
+  WAIT_FOR_COMMAND: 5000,
 };

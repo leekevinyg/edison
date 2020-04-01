@@ -4,21 +4,17 @@ import navigation from '../intents/navigation/index.js';
 import scroll from '../intents/scroll/index.js';
 import handleMediaCommand from '../intents/media/index.js';
 import intentParser from './parser.js';
+import { STATES } from '../constants.js';
 
 /**
  *
  * @param {string} utterence A string containing the user's utterence
  */
 const run = (utterence) => {
-  console.log(utterence);
-  // Parse the users utterence into an intent object containing
   const intent = intentParser.parse(utterence);
   if (intent === null) {
-    console.log('No command found. Please try again.');
-    chrome.runtime.sendMessage({
-      type: 'intentError',
-      data: 'No command found. Please try again.',
-    });
+    const msg = new SpeechSynthesisUtterance(STATES.ERROR);
+    window.speechSynthesis.speak(msg);
   }
 
   const { command, detectedKeywords } = intent;

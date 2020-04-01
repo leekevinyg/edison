@@ -5,7 +5,7 @@
  */
 
 const commands = ['click', 'open', 'close', 'back', 'forward', 'scroll', 'play', 'rewind',
-  'skip', 'pause'];
+  'skip', 'pause', 'clicks'];
 
 const parse = (utterence) => {
   const detectedKeywords = utterence.split(' ');
@@ -13,8 +13,13 @@ const parse = (utterence) => {
   const command = detectedKeywords[0].toLowerCase();
   detectedKeywords.shift();
   switch (command) {
-    case 'open':
     case 'click':
+    case 'clicks':
+      return {
+        command: 'click',
+        detectedKeywords,
+      };
+    case 'open':
     case 'scroll': {
       return {
         command,
@@ -46,7 +51,7 @@ const pickBestUtterenceDetected = (utterences) => {
       return currentUtterence;
     }
   }
-  return utterences[0];
+  return null;
 };
 
 export default {

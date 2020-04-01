@@ -1,4 +1,4 @@
-/* global chrome */
+/* global annyang */
 
 /**
  *
@@ -12,33 +12,39 @@ import MicrophonePermissions from './microphone/microphone-permissions.js';
 import Recorder from './microphone/recorder.js';
 import parser from './intentEngine/parser.js';
 import runner from './intentEngine/runner.js';
+import { STATES, TIMEOUTS } from './constants.js';
 
-const bumblebee = new BumbleBee();
-bumblebee.setWorkersPath('vendor/bumblebee/workers');
-bumblebee.addHotword('bumblebee');
-bumblebee.setSensitivity(1.0);
+const initializeHotWordDetection = () => {
+  bumblebee = new BumbleBee();
+  bumblebee.setWorkersPath('vendor/bumblebee/workers');
+  bumblebee.addHotword('hey_edison');
+  bumblebee.setSensitivity(1.0);
+};
 
-bumblebee.on('hotword', async (hotword) => {
-  // focus tab?
+const endCommandDetection = () => {
+  annyang.removeCallback();
+  annyang.abort();
+};
+
+let bumblebee = null;
+initializeHotWordDetection();
+bumblebee.on('hotword', () => {
   MicrophonePermissions.request();
   const recorder = new Recorder();
-
-  recorder.onStart = () => {
-    console.log('listening');
-  };
-  recorder.onEndRecording = async (phrases) => {
+  setTimeout(endCommandDetection, TIMEOUTS.WAIT_FOR_COMMAND);
+  recorder.onEndRecording = (phrases) => {
     if (!phrases || phrases.length === 0) {
-      // TODO: play an error sound.
-      console.log('sorry, failed to parse command');
+      const msg = new SpeechSynthesisUtterance(STATES.ERROR);
+      window.speechSynthesis.speak(msg);
     }
     const utterence = parser.pickBestUtterenceDetected(phrases);
-    console.log(utterence);
-    // fire intent off to intent engine
-    // TODO: Play error for unparsed command too. Play success for parsed command.
-    runner.run(utterence);
-    console.log('finished listening');
-    annyang.removeCallback();
-    annyang.abort();
+    if (utterence) {
+      runner.run(utterence);
+    } else {
+      const msg = new SpeechSynthesisUtterance(STATES.ERROR);
+      window.speechSynthesis.speak(msg);
+    }
+    endCommandDetection();
   };
   recorder.startRecording();
 });

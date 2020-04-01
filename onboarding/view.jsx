@@ -22,10 +22,11 @@ const OnboardingView = ({ permissionError }) => (permissionError
         Try saying "Open Youtube"
       </div>
       <div className="welcome-message">
-        More commands available in the <a href="https://github.com/leekevinyg/tulip-web/blob/master/README.md#UserGuide">User Guide</a>
+        More commands available in the
+        <a href="https://github.com/leekevinyg/tulip-web/blob/master/README.md#UserGuide">User Guide</a>
       </div>
     </div>
-      
+
   )
 );
 
