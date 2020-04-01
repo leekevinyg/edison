@@ -3,16 +3,25 @@ import click from '../intents/click/index.js';
 import navigation from '../intents/navigation/index.js';
 import scroll from '../intents/scroll/index.js';
 import handleMediaCommand from '../intents/media/index.js';
+import intentParser from './parser.js';
 
 /**
  *
- * @param {object} intent
- * @param {string} intent.command
- * @param {string[]} intent.detectedKeywords An array of detected utterences
+ * @param {string} utterence A string containing the user's utterence
  */
-const run = (intent) => {
-  const { command, detectedKeywords } = intent;
+const run = (utterence) => {
+  console.log(utterence);
+  // Parse the users utterence into an intent object containing
+  const intent = intentParser.parse(utterence);
+  if (intent === null) {
+    console.log('No command found. Please try again.');
+    chrome.runtime.sendMessage({
+      type: 'intentError',
+      data: 'No command found. Please try again.',
+    });
+  }
 
+  const { command, detectedKeywords } = intent;
   switch (command) {
     case 'open':
       open(detectedKeywords);

@@ -23,10 +23,14 @@ class Recorder {
     });
 
     annyang.addCallback('soundstart', this.onBeginRecording);
-    annyang.addCallback('result', this.onEndRecording);
+    annyang.addCallback('result', (phrases) => {
+      helpers.unmuteTabs();
+      this.onEndRecording(phrases);
+    });
 
     window.addEventListener('unload', () => {
       annyang.removeCallback();
+      annyang.abort();
     });
   }
 

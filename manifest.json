@@ -6,11 +6,12 @@
     "permissions": [
         "declarativeContent", 
         "tabs", 
-        "activeTab"
+        "activeTab",
+        "*://*/background.html"
     ],
     "background": {
         "page": "background.html",
-        "persistent": false
+        "persistent": true
     },
     "browser_action": {
         "default_popup": "popup/popup.html",

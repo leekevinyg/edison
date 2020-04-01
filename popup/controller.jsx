@@ -10,11 +10,11 @@
 */
 
 import Popup from './view.js';
-import { STATES } from './constants.js';
-import MicrophonePermissions from './microphone-permissions.js';
-import Recorder from './recorder.js';
-import helpers from '../helpers.js';
+import { STATES } from '../constants.js';
+import MicrophonePermissions from '../microphone/microphone-permissions.js';
+import Recorder from '../microphone/recorder.js';
 import parser from '../intentEngine/parser.js';
+import runner from '../intentEngine/runner.js';
 
 const { useState, useEffect } = React;
 const popupContainer = document.getElementById('popup-container');
@@ -42,7 +42,6 @@ const PopupController = () => {
     };
 
     recorder.onEndRecording = async (phrases) => {
-      helpers.unmuteTabs();
       if (!phrases || phrases.length === 0) {
         setCurrentState(STATES.ERROR);
         await new Promise((r) => setTimeout(r, 1500));
@@ -50,16 +49,12 @@ const PopupController = () => {
       }
       const utterence = parser.pickBestUtterenceDetected(phrases);
       setTranscription(utterence);
-      // fire intent off to intent engine
-      chrome.runtime.sendMessage({
-        type: 'runIntent',
-        utterence,
-      });
+      runner.run(utterence);
       setTimeout(() => window.close(), 2000);
     };
 
     recorder.startRecording();
-    // listen for results of our intents
+    // listen for results of our commands
     chrome.runtime.onMessage.addListener(handleMessage);
   };
 

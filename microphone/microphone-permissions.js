@@ -5,7 +5,7 @@
  *   - Acquiring permissions to the user's microphone
  */
 
-import { TIMEOUTS } from './constants.js';
+import { TIMEOUTS } from '../constants.js';
 
 const request = async () => {
   try {

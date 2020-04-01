@@ -3,47 +3,44 @@
 /**
  *
  * Thie file is responsible for:
- * - Parsing an utterence received into an intent, and then running it.
+ * - Handling wakeword detection.
  *
  */
 
 import BumbleBee from './vendor/bumblebee/bumblebee.js';
-import intentParser from './intentEngine/parser.js';
-import intentRunner from './intentEngine/runner.js';
+import MicrophonePermissions from './microphone/microphone-permissions.js';
+import Recorder from './microphone/recorder.js';
+import parser from './intentEngine/parser.js';
+import runner from './intentEngine/runner.js';
 
-/**
- *
- * @param {object} message
- * @param {string} message.type
- * @param {string} message.utterence
- */
-const processMessage = (message) => {
-  const { type, utterence } = message;
-  switch (type) {
-    case 'runIntent': {
-      const intent = intentParser.parse(utterence);
-      if (intent) {
-        intentRunner.run(intent);
-      } else {
-        chrome.runtime.sendMessage({
-          type: 'intentError',
-          data: 'No command found. Please try again.',
-        });
-      }
-    }
-      break;
-    default:
-      break;
-  }
-};
-
-chrome.runtime.onMessage.addListener(processMessage);
-
-let bumblebee = new BumbleBee();
+const bumblebee = new BumbleBee();
 bumblebee.setWorkersPath('vendor/bumblebee/workers');
 bumblebee.addHotword('bumblebee');
-bumblebee.setSensitivity(0.5);
-bumblebee.on('hotword', function(hotword) {
-  chrome.tabs.create( {url:"../popup/popup.html"} );
+bumblebee.setSensitivity(1.0);
+
+bumblebee.on('hotword', async (hotword) => {
+  // focus tab?
+  MicrophonePermissions.request();
+  const recorder = new Recorder();
+
+  recorder.onStart = () => {
+    console.log('listening');
+  };
+  recorder.onEndRecording = async (phrases) => {
+    if (!phrases || phrases.length === 0) {
+      // TODO: play an error sound.
+      console.log('sorry, failed to parse command');
+    }
+    const utterence = parser.pickBestUtterenceDetected(phrases);
+    console.log(utterence);
+    // fire intent off to intent engine
+    // TODO: Play error for unparsed command too. Play success for parsed command.
+    runner.run(utterence);
+    console.log('finished listening');
+    annyang.removeCallback();
+    annyang.abort();
+  };
+  recorder.startRecording();
 });
+
 bumblebee.start();
