@@ -3,6 +3,8 @@
 /**
  * This file is responsible for:
  *   - Acquiring permissions to the user's microphone
+ *   - Note that this file only handles the case where the permission is available. If not,
+ *     we request permissions from the onboarding page.
  */
 
 import { TIMEOUTS } from '../constants.js';
@@ -15,7 +17,6 @@ const request = async () => {
       // Due to chrome extension limitations, microphone permissions may need to be requested
       // from a separate onboarding tab the first time.
       startOnboarding();
-      window.close();
       return;
     }
     throw e;

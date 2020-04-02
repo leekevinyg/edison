@@ -1,4 +1,4 @@
-/* global React, ReactDOM */
+/* global React, ReactDOM, chrome */
 
 /**
  * This file manages
@@ -30,6 +30,10 @@ const OnboardingController = () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: true,
+      });
+      chrome.runtime.sendMessage({
+        type: 'permission',
+        data: 'microphone-access-granted',
       });
       setPermissionError(null);
       stopMedia(stream.getTracks());

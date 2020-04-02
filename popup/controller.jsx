@@ -9,11 +9,10 @@
 */
 
 import Popup from './view.js';
-import { STATES } from '../constants.js';
+import { STATES, TIMEOUTS } from '../constants.js';
 import MicrophonePermissions from '../microphone/microphone-permissions.js';
 import Recorder from '../microphone/recorder.js';
 import parser from '../intentEngine/parser.js';
-import runner from '../intentEngine/runner.js';
 
 const { useState, useEffect } = React;
 const popupContainer = document.getElementById('popup-container');
@@ -48,11 +47,15 @@ const PopupController = () => {
       }
       const utterence = parser.pickBestUtterenceDetected(phrases);
       setTranscription(utterence);
-      runner.run(utterence);
+      chrome.runtime.sendMessage({
+        type: 'utterence',
+        data: utterence,
+      });
       setTimeout(() => window.close(), 2000);
     };
 
     recorder.startRecording();
+    setTimeout(window.close, TIMEOUTS.WAIT_FOR_COMMAND);
   };
 
   return (

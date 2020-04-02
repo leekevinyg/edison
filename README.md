@@ -22,9 +22,7 @@ You can download the extension from the chrome store [here](https://chrome.googl
 <a name="UserGuide"></a>
 # User Guide
 
-The extension can be triggered by clicking on the extension icon in the top right of the chrome toolbar or by hitting "Command+Shift+O" on a Mac or "Ctrl+Shift+O" on Windows.
-
-Alternatively, the wakeword "Hey Edison" is available for a completely handsfree experience.
+The extension can be triggered by clicking on the extension icon in the top right of the chrome toolbar or by hitting "Command+Shift+O" on a Mac or "Ctrl+Shift+O" on Windows. Alternatively, the wakeword "Hey Edison" is available for a completely handsfree experience.
 
 The following commands are supported:
 
@@ -38,7 +36,7 @@ Examples: "Click Sign-In", "Click the title of a video", "Click a Netflix profil
 
 - **Close**  
 Closes current tab. Useful if a mistake or unintended tab is opened.  
-Example: Just say "Close".
+Example: Just say "Close tab".
 
 - **Back**  
 Navigates to last visited page in the browser.  
@@ -62,10 +60,9 @@ Example: Just say "Rewind" when viewing a Netflix title.
 Fast forwards the Netflix title by 10 seconds.  
 Example: Just say "Skip" when viewing a Netflix title.
 
-Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately. Improvements to this coming shortly.
+Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
 
 For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
-
 <a name="Future"></a>
 # Improving Accessibility and Future Directions 
 
