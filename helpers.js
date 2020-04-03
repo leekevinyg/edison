@@ -12,10 +12,10 @@ const lazyInject = async (tabId, scripts) => {
     throw new Error(`Invalid tabId: ${tabId}`);
   }
   const injectedScripts = [
-    'communication/communication.js',
-  ].concat(scripts).concat(
     'communication/responder.js',
-  );
+    'communication/communication.js',
+  ].concat(scripts);
+
   const loadedScripts = await getLoadedScripts(tabId);
   for (let i = 0; i < injectedScripts.length; i++) {
     if (!loadedScripts || !loadedScripts[injectedScripts[i]]) {
@@ -36,6 +36,9 @@ const getLoadedScripts = async (tabId) => {
     }, (response) => {
       if (response && response.loadedScripts) {
         resolve(response.loadedScripts);
+      } else if (chrome.runtime.lastError) {
+        // we must check chrome.runtime.lastError, otherwise an error will appear in the console.
+        resolve(null);
       } else {
         resolve(null);
       }
