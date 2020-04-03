@@ -26,7 +26,7 @@ The extension can be triggered by clicking on the extension icon in the top righ
 
 Alternatively, the wakeword "Hey Edison" is available for a completely handsfree experience. If using the wakeword, just say "Hey Edison" followed by any of the command detailed below.
 
-The following commands are supported:
+The following commands are currently supported for Youtube, Netflix, Facebook, Gmail and Instagram:
 
 - **Open**  
 Opens the first google search result that best matches the words spoken after the "open" command.  
