@@ -19,7 +19,7 @@ const OnboardingView = ({ permissionError }) => (permissionError
         First, enable your microphone access.
       </div>
       <div className="welcome-message">
-        Try saying &quote;Hey Edison, Open Youtube&quote;
+        Try saying "Hey Edison, Open Youtube"
       </div>
       <div className="welcome-message">
         More commands available in the
