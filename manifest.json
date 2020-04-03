@@ -1,13 +1,17 @@
 {
     "name": "Edison",
-    "version": "1.2",
+    "version": "1.3",
     "description": "Voice activated browsing of Chrome.",
     "manifest_version": 2,
     "permissions": [
         "declarativeContent", 
         "tabs", 
         "activeTab",
-        "*://*/background.html"
+        "https://www.youtube.com/*",
+        "https://www.netflix.com/*",
+        "https://www.facebook.com/*",
+        "https://www.mail.google.com/*",
+        "https://www.instagram.com/*"
     ],
     "background": {
         "page": "background.html",
