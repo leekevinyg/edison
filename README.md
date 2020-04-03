@@ -24,7 +24,7 @@ You can download the extension from the chrome store [here](https://chrome.googl
 
 The extension can be triggered by clicking on the extension icon in the top right of the chrome toolbar or by hitting "Command+Shift+O" on a Mac or "Ctrl+Shift+O" on Windows. 
 
-Alternatively, the wakeword "Hey Edison" is available for a completely handsfree experience. If using the wakeword, just say "Hey Edison" followed by any of the command detailed below.
+Alternatively, the wakeword "Hey Edison" is available for a completely handsfree experience. If using the wakeword, just say "Hey Edison" followed by any of the commands detailed below.
 
 The following commands are currently supported for Youtube, Netflix, Facebook, Gmail and Instagram:
 
