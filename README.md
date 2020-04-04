@@ -78,17 +78,6 @@ Furthermore, to increase extensibility, it may be worthwhile to expose an API fo
 <a name="Developing"></a>
 # Development Guide
 
-The architecture was inspired in parts by the [firefox voice](https://github.com/mozilla/firefox-voice) project.
-A detailed overview will be available under a [docs]() directory shortly. For now, each non-trivial file has a comment section at the top with a brief overview of the purpose of the file.
-
-The extension currently utilizes a few external dependencies:
-
-- Speech recognition with [annyang](https://github.com/TalAter/annyang).
-
-- Fuzzy search powered by [fuse](https://fusejs.io/).
-
-- Wakeword detection powered by [bumblebee](https://github.com/jaxcore/bumblebee-hotword).
-
 To start up a development environment:
 
 1. Ensure you have [nodejs](https://nodejs.org/en/download/). 
@@ -98,6 +87,14 @@ To start up a development environment:
 * ``` npm run build ```
 
 3. Load the project directory as an unpacked chrome extension by following the directions [here](https://developer.chrome.com/extensions/getstarted#manifest)
+
+Note, the extension currently utilizes a few external dependencies:
+
+- Speech recognition with [annyang](https://github.com/TalAter/annyang).
+
+- Fuzzy search powered by [fuse](https://fusejs.io/).
+
+- Wakeword detection powered by [bumblebee](https://github.com/jaxcore/bumblebee-hotword).
 
 Some useful resources:
 
