@@ -95,4 +95,4 @@ Some useful resources:
 <a name="Feedback"></a>
 # Suggestions and Feedback
 
-If you have any ideas on how to improve the tool, or encounter any behaviour that is unexpected, please feel free to file an issue [here](https://github.com/leekevinyg/tulip-web/issues/new).
+If you have any ideas on how to improve the tool, or encounter any behaviour that is unexpected, please feel free to shoot me an email at klee2010@gmail.com
