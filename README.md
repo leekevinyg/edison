@@ -79,8 +79,8 @@ To start up a development environment:
 3. Load the project directory as an unpacked chrome extension by:
 
 - Going to chrome://extensions
-- Switching on developer mode on top right corner
-- Load unpacked and point to the directory you cloned in step 2.
+- Toggle on "developer mode" in the top right corner of the page
+- Click the "Load unpacked" button on the top left and point to the directory you cloned in step 2.
 
 Note, the extension currently utilizes a few external dependencies:
 
