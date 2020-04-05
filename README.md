@@ -5,7 +5,6 @@ Edison is a voice activated web navigation extension for the Chrome browser.
 - <a href="#Demo">Demo</a>
 - <a href="#Download">Download</a>
 - <a href="#UserGuide">User Guide</a>
-- <a href="#Future">Improving Accessibility and Future Directions</a>
 - <a href="#Developing">Development Guide</a>
 - <a href="#Feedback">Feedback</a>
 
@@ -65,15 +64,6 @@ Example: Just say "Skip" when viewing a Netflix title.
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
 
 For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
-<a name="Future"></a>
-# Improving Accessibility and Future Directions 
-
-As of April 2020, the current limits and quotas for the [Web Speech API](https://wicg.github.io/speech-api/) are unclear. Therefore, the following improvements would increase the stability of the project moving forward:
-
-- Hosting our own deep speech recognition server, like [Mozilla Deep Speech](https://github.com/mozilla/DeepSpeech)
-- Moving towards a more stable paid service with clearly defined speech recognition quotas, like [PicoVoice](https://picovoice.ai/) or the official [Google Speech-to-Text Engine](https://cloud.google.com/speech-to-text/docs)
-
-Furthermore, to increase extensibility, it may be worthwhile to expose an API for this extension that would allow developers to load custom voice commands.
 
 <a name="Developing"></a>
 # Development Guide
