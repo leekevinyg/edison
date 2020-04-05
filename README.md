@@ -76,7 +76,11 @@ To start up a development environment:
 * ``` npm install ``` 
 * ``` npm run build ```
 
-3. Load the project directory as an unpacked chrome extension by following the directions [here](https://developer.chrome.com/extensions/getstarted#manifest)
+3. Load the project directory as an unpacked chrome extension by:
+
+- Going to chrome://extensions
+- Switching on developer mode on top right corner
+- Load unpacked and point to the directory you cloned in step 2.
 
 Note, the extension currently utilizes a few external dependencies:
 
