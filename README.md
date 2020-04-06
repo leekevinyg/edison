@@ -47,16 +47,6 @@ Examples: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right".
 Plays or pauses the video in the current tab.  
 Example: Just say "Play" or "Pause" when viewing a video.
 
-The following commands are specific to Netflix:  
-
-- **Rewind**  
-Rewinds the current Netflix title by 10 seconds.  
-Example: Just say "Rewind" when viewing a Netflix title.
-
-- **Skip**  
-Fast forwards the Netflix title by 10 seconds.  
-Example: Just say "Skip" when viewing a Netflix title.
-
 - **Focus Next Tab**  
 Navigates to the next tab
 
@@ -72,6 +62,14 @@ Hits the browser forward button
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
 
 For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
+
+- **Rewind**  
+Specific to Netflix. Rewinds the current Netflix title by 10 seconds.  
+Example: Just say "Rewind" when viewing a Netflix title.
+
+- **Skip**  
+Specific to Netflix. Fast forwards the Netflix title by 10 seconds.  
+Example: Just say "Skip" when viewing a Netflix title.
 
 <a name="Developing"></a>
 # Development Guide
