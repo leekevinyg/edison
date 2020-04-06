@@ -82,6 +82,12 @@ To start up a development environment:
 - Toggle on "developer mode" in the top right corner of the page
 - Click the "Load unpacked" button on the top left and point to the directory you cloned in step 2.
 
+4. If you are making .jsx changes, you can run the watch command:
+
+```npm run watch```
+
+to automatically convert your .jsx changes to loadable .js files.
+
 Note, the extension currently utilizes a few external dependencies:
 
 - Speech recognition with [annyang](https://github.com/TalAter/annyang).
