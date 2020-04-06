@@ -30,7 +30,7 @@ The following commands are currently supported:
 
 - **Open**  
 Opens the first google search result that best matches the words spoken after the "open" command.  
-Examples: "Open Spotify", "Open Youtube", "Open Netflix".
+Examples: "Open News", "Open Youtube", "Open Netflix".
 
 - **Click**  
 Tries to click anything that approximately matches the words spoken after the "click" command.  
