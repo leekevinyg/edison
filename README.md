@@ -25,7 +25,7 @@ The extension can be triggered by clicking on the extension icon in the top righ
 
 Alternatively, the wakeword "Hey Edison" is available for a completely handsfree experience. If using the wakeword, just say "Hey Edison" followed by any of the commands detailed below.
 
-The following commands are currently supported for Youtube, Netflix, Facebook, Gmail and Instagram:
+The following commands are currently supported:
 
 - **Open**  
 Opens the first google search result that best matches the words spoken after the "open" command.  
@@ -38,10 +38,6 @@ Examples: "Click Sign-In", "Click the title of a video", "Click a Netflix profil
 - **Close**  
 Closes current tab. Useful if a mistake or unintended tab is opened.  
 Example: Just say "Close tab".
-
-- **Back**  
-Navigates to last visited page in the browser.  
-Example: Just say "Back".
 
 - **Scroll**  
 Scrolls the page up/down/left/right.  
@@ -60,6 +56,18 @@ Example: Just say "Rewind" when viewing a Netflix title.
 - **Skip**  
 Fast forwards the Netflix title by 10 seconds.  
 Example: Just say "Skip" when viewing a Netflix title.
+
+- **Focus Next Tab** 
+Navigates to the next tab
+
+- **Focus Previous Tab**
+Navigates to the previous tab
+
+- **Go back**
+Hits the browser back button
+
+- **Go forward**
+Hits the browser forward button
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
 
