@@ -26,6 +26,16 @@ chrome.runtime.onInstalled.addListener(async () => {
   });
 });
 
+chrome.runtime.onStartup.addListener(async () => {
+  await navigator.permissions.query({ name: 'microphone' }).then((result) => {
+    if (result.state === 'prompt') {
+      MicrophonePermissions.request();
+    } else if (result.state === 'granted') {
+      init();
+    }
+  });
+});
+
 chrome.runtime.onMessage.addListener((message) => {
   const { type, data } = message;
   if (type === 'permission' && data === 'microphone-access-granted') {
