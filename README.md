@@ -57,16 +57,16 @@ Example: Just say "Rewind" when viewing a Netflix title.
 Fast forwards the Netflix title by 10 seconds.  
 Example: Just say "Skip" when viewing a Netflix title.
 
-- **Focus Next Tab** 
+- **Focus Next Tab**  
 Navigates to the next tab
 
-- **Focus Previous Tab**
+- **Focus Previous Tab**  
 Navigates to the previous tab
 
-- **Go back**
+- **Go back**  
 Hits the browser back button
 
-- **Go forward**
+- **Go forward**  
 Hits the browser forward button
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
