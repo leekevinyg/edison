@@ -21,18 +21,26 @@ const close = async () => {
   await chrome.tabs.remove(tab.id);
 };
 
-/* TODO:
-const focusNextTab = () => {
-
+const focusNextTab = async () => {
+  const tab = await helpers.getActiveTab();
+  const tabCount = await helpers.getTabCount();
+  const activeTabIndex = tab.index;
+  const targetTabIndex = [activeTabIndex + 1] % tabCount;
+  chrome.tabs.highlight({ tabs: [targetTabIndex] });
 };
 
-const focusPreviousTab = () => {
-
+const focusPreviousTab = async () => {
+  const tab = await helpers.getActiveTab();
+  const tabCount = await helpers.getTabCount();
+  const activeTabIndex = tab.index;
+  const targetTabIndex = [tabCount + activeTabIndex - 1] % tabCount;
+  chrome.tabs.highlight({ tabs: [targetTabIndex] });
 };
-*/
 
 export default {
   back,
   forward,
   close,
+  focusNextTab,
+  focusPreviousTab,
 };

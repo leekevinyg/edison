@@ -16,7 +16,7 @@ const run = (utterence) => {
     const msg = new SpeechSynthesisUtterance(STATES.ERROR);
     window.speechSynthesis.speak(msg);
   }
-
+  console.log(intent);
   const { command, detectedKeywords } = intent;
   switch (command) {
     case 'open':
@@ -42,6 +42,13 @@ const run = (utterence) => {
     case 'play':
     case 'pause':
       handleMediaCommand(command);
+      break;
+    case 'navigate':
+      if (detectedKeywords[0] === 'next') {
+        navigation.focusNextTab();
+      } else if (detectedKeywords[0] === 'previous') {
+        navigation.focusPreviousTab();
+      }
       break;
     default:
       break;
