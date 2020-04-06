@@ -59,10 +59,6 @@ Hits the browser back button
 - **Go forward**  
 Hits the browser forward button
 
-Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
-
-For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
-
 - **Rewind**  
 Specific to Netflix. Rewinds the current Netflix title by 10 seconds.  
 Example: Just say "Rewind" when viewing a Netflix title.
@@ -70,6 +66,10 @@ Example: Just say "Rewind" when viewing a Netflix title.
 - **Skip**  
 Specific to Netflix. Fast forwards the Netflix title by 10 seconds.  
 Example: Just say "Skip" when viewing a Netflix title.
+
+Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
+
+For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
 
 <a name="Developing"></a>
 # Development Guide
