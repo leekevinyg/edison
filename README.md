@@ -6,6 +6,7 @@ Edison is a voice activated web navigation extension for the Chrome browser.
 - <a href="#Download">Download</a>
 - <a href="#UserGuide">User Guide</a>
 - <a href="#Developing">Development Guide</a>
+- <a href="#Doc">Design Document</a>
 - <a href="#Feedback">Feedback</a>
 
 <a name="Demo"></a>
@@ -29,7 +30,7 @@ The following commands are currently supported:
 
 - **Open**  
 Opens the first google search result that best matches the words spoken after the "open" command.  
-Examples: "Open Spotify", "Open Youtube", "Open Netflix".
+Examples: "Open News", "Open Youtube", "Open Netflix".
 
 - **Click**  
 Tries to click anything that approximately matches the words spoken after the "click" command.  
@@ -47,27 +48,25 @@ Examples: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right".
 Plays or pauses the video in the current tab.  
 Example: Just say "Play" or "Pause" when viewing a video.
 
-The following commands are specific to Netflix:  
+- **Focus Next Tab**  
+Navigates to the next tab
+
+- **Focus Previous Tab**  
+Navigates to the previous tab
+
+- **Go back**  
+Hits the browser back button
+
+- **Go forward**  
+Hits the browser forward button
 
 - **Rewind**  
-Rewinds the current Netflix title by 10 seconds.  
+Specific to Netflix. Rewinds the current Netflix title by 10 seconds.  
 Example: Just say "Rewind" when viewing a Netflix title.
 
 - **Skip**  
-Fast forwards the Netflix title by 10 seconds.  
+Specific to Netflix. Fast forwards the Netflix title by 10 seconds.  
 Example: Just say "Skip" when viewing a Netflix title.
-
-- **Focus Next Tab** 
-Navigates to the next tab
-
-- **Focus Previous Tab**
-Navigates to the previous tab
-
-- **Go back**
-Hits the browser back button
-
-- **Go forward**
-Hits the browser forward button
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
 
@@ -90,13 +89,11 @@ To start up a development environment:
 - Toggle on "developer mode" in the top right corner of the page
 - Click the "Load unpacked" button on the top left and point to the directory you cloned in step 2.
 
-4. If you are making ```.jsx``` changes, you can run the watch command:
+4. If you are making ```.jsx``` changes, you can run the watch command to automatically convert your ```.jsx``` changes to loadable ```.js``` files:
 
 - ```npm run watch```
 
-to automatically convert your ```.jsx``` changes to loadable ```.js``` files.
-
-The entry point for all voice commands is located in the background script [here](https://github.com/leekevinyg/edison/blob/master/background.js#L60).
+The **entry point** for all voice commands is located in the background script [here](https://github.com/leekevinyg/edison/blob/master/background.js#L60).
 
 Note, the extension currently utilizes a few external dependencies:
 
@@ -111,6 +108,10 @@ Some useful resources:
 (1) [Chrome Extension Architecture Overview](https://developer.chrome.com/extensions/overview#arch)
 
 (2) [Chrome Extension Message Passing](https://developer.chrome.com/extensions/messaging)
+
+<a name="Doc"></a>
+# Design Document
+A design document for this project is available [here](https://docs.google.com/document/d/1nKaC_UrZWs74rFF9CNAl-1SZkBbAQJlreTb008G3Zjs/edit?usp=sharing).
 
 <a name="Feedback"></a>
 # Suggestions and Feedback
