@@ -43,6 +43,13 @@ const run = (utterence) => {
     case 'pause':
       handleMediaCommand(command);
       break;
+    case 'navigate':
+      if (detectedKeywords[0] === 'next') {
+        navigation.focusNextTab();
+      } else if (detectedKeywords[0] === 'previous') {
+        navigation.focusPreviousTab();
+      }
+      break;
     default:
       break;
   }

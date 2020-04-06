@@ -66,9 +66,17 @@ const unmuteTabs = () => {
   });
 };
 
+const getTabCount = async () => new Promise((resolve) => chrome.tabs.query(
+  { currentWindow: true },
+  (tabs) => {
+    resolve(tabs.length);
+  },
+));
+
 export default {
   lazyInject,
   getActiveTab,
   muteTabs,
   unmuteTabs,
+  getTabCount,
 };

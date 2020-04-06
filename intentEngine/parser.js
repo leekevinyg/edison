@@ -5,7 +5,7 @@
  */
 
 const commands = ['click', 'open', 'close', 'back', 'forward', 'scroll', 'play', 'rewind',
-  'skip', 'pause', 'clicks'];
+  'skip', 'pause', 'clicks', 'navigate'];
 
 const parse = (utterence) => {
   const detectedKeywords = utterence.split(' ');
@@ -35,6 +35,12 @@ const parse = (utterence) => {
     case 'skip': {
       return {
         command,
+      };
+    }
+    case 'navigate': {
+      return {
+        command,
+        detectedKeywords,
       };
     }
     default:
