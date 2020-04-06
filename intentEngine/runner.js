@@ -16,7 +16,7 @@ const run = (utterence) => {
     const msg = new SpeechSynthesisUtterance(STATES.ERROR);
     window.speechSynthesis.speak(msg);
   }
-  console.log(intent);
+
   const { command, detectedKeywords } = intent;
   switch (command) {
     case 'open':
