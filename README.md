@@ -6,6 +6,7 @@ Edison is a voice activated web navigation extension for the Chrome browser.
 - <a href="#Download">Download</a>
 - <a href="#UserGuide">User Guide</a>
 - <a href="#Developing">Development Guide</a>
+- <a href="#Doc">Design Document</a>
 - <a href="#Feedback">Feedback</a>
 
 <a name="Demo"></a>
@@ -109,6 +110,10 @@ Some useful resources:
 (1) [Chrome Extension Architecture Overview](https://developer.chrome.com/extensions/overview#arch)
 
 (2) [Chrome Extension Message Passing](https://developer.chrome.com/extensions/messaging)
+
+<a name="Doc"></a>
+# Design Document
+A design document for this project is available [here](https://docs.google.com/document/d/1nKaC_UrZWs74rFF9CNAl-1SZkBbAQJlreTb008G3Zjs/edit?usp=sharing).
 
 <a name="Feedback"></a>
 # Suggestions and Feedback
