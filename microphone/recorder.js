@@ -7,6 +7,7 @@
  *     and transcription results back to the main user interface
  */
 import helpers from '../helpers.js';
+import { TIMEOUTS } from '../constants.js';
 
 class Recorder {
   startRecording() {
@@ -17,6 +18,7 @@ class Recorder {
 
     annyang.addCallback('start', () => {
       helpers.muteTabs();
+      setTimeout(helpers.unmuteTabs, TIMEOUTS.MUTE_TABS_TIMEOUT);
       const audio = new Audio('https://mozilla.github.io/firefox-voice/chime.ogg');
       audio.play();
       this.onStart();
