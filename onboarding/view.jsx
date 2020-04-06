@@ -1,4 +1,5 @@
 /* global React, PropTypes */
+// eslint-disable-file react/no-unescaped-entities
 
 const OnboardingView = ({ permissionError }) => (permissionError
   ? (

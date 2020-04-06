@@ -5,12 +5,12 @@ import scroll from '../intents/scroll/index.js';
 import handleMediaCommand from '../intents/media/index.js';
 import intentParser from './parser.js';
 import { STATES } from '../constants.js';
-
 /**
  *
  * @param {string} utterence A string containing the user's utterence
  */
 const run = (utterence) => {
+  console.log(utterence);
   const intent = intentParser.parse(utterence);
   if (intent === null) {
     const msg = new SpeechSynthesisUtterance(STATES.ERROR);
@@ -28,11 +28,12 @@ const run = (utterence) => {
     case 'scroll':
       scroll(detectedKeywords);
       break;
-    case 'back':
-      navigation.back();
-      break;
-    case 'forward':
-      navigation.forward();
+    case 'go':
+      if (detectedKeywords[0] === 'back') {
+        navigation.back();
+      } else if (detectedKeywords[0] === 'forward') {
+        navigation.forward();
+      }
       break;
     case 'close':
       navigation.close();
@@ -43,7 +44,7 @@ const run = (utterence) => {
     case 'pause':
       handleMediaCommand(command);
       break;
-    case 'navigate':
+    case 'focus':
       if (detectedKeywords[0] === 'next') {
         navigation.focusNextTab();
       } else if (detectedKeywords[0] === 'previous') {

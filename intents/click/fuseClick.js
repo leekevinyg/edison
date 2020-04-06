@@ -31,7 +31,7 @@ this.click = (function () {
     highlightElement(found);
     setTimeout(() => {
       found.click();
-    }, 100);
+    }, 200);
   }
 
   function getStructuredSearchContent() {
@@ -100,6 +100,6 @@ this.click = (function () {
   }
 
   function findLinks() {
-    return document.body.querySelectorAll('a');
+    return document.body.querySelectorAll('a,button');
   }
 }());
