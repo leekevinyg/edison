@@ -99,8 +99,6 @@ Logging from extension side javascript is viewable by inspecting the ```backgrou
 
 For injected content scripts, logging is viewable by opening the regular developer tools on the webpage the content script was injected into.
 
-If you have any questions, feel free to shoot me an email at klee2010@gmail.com.
-
 Note, the extension currently utilizes a few external dependencies:
 
 - Speech recognition with [annyang](https://github.com/TalAter/annyang).
@@ -114,6 +112,8 @@ Some useful resources:
 (1) [Chrome Extension Architecture Overview](https://developer.chrome.com/extensions/overview#arch)
 
 (2) [Chrome Extension Message Passing](https://developer.chrome.com/extensions/messaging)
+
+If you have any questions, feel free to shoot me an email at klee2010@gmail.com.
 
 <a name="Doc"></a>
 # Design Document
