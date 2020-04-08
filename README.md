@@ -85,7 +85,7 @@ To start up a development environment:
 
 3. Load the project directory as an unpacked chrome extension by:
 
-- Going to chrome://extensions
+- Going to ```chrome://extensions```
 - Toggle on "developer mode" in the top right corner of the page
 - Click the "Load unpacked" button on the top left and point to the directory you cloned in step 2.
 
@@ -94,6 +94,12 @@ To start up a development environment:
 - ```npm run watch```
 
 The **entry point** for all voice commands is located in the background script [here](https://github.com/leekevinyg/edison/blob/master/background.js#L60).
+
+Logging from extension side javascript is viewable by inspecting the ```background.html``` view from the extension entry under ```chrome://extensions```. Note that developer mode must be enabled.
+
+For injected content scripts, logging is viewable by opening the regular developer tools on the webpage the content script was injected into.
+
+If you have any questions, feel free to shoot me an email at klee2010@gmail.com.
 
 Note, the extension currently utilizes a few external dependencies:
 
