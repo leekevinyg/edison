@@ -113,6 +113,8 @@ Some useful resources:
 # Design Document
 A design document for this project is available [here](https://docs.google.com/document/d/1nKaC_UrZWs74rFF9CNAl-1SZkBbAQJlreTb008G3Zjs/edit?usp=sharing).
 
+You can also watch a presentation on the motivations behind the project [here](https://youtu.be/onA30s6UjRI).
+
 <a name="Feedback"></a>
 # Suggestions and Feedback
 
