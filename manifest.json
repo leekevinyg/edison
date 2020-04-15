@@ -1,6 +1,6 @@
 {
     "name": "Edison",
-    "version": "1.5",
+    "version": "1.6",
     "description": "Voice activated browsing of Chrome.",
     "manifest_version": 2,
     "permissions": [
