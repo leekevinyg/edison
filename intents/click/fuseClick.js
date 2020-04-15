@@ -100,6 +100,12 @@ this.click = (function () {
   }
 
   function findLinks() {
+    const url = window.location.href;
+
+    if (url.includes('mail.google.com')) {
+      return document.body.querySelectorAll('a,button,span');
+    }
+
     return document.body.querySelectorAll('a,button');
   }
 }());
