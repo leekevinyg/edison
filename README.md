@@ -1,6 +1,6 @@
 # Edison
 
-Edison is a handsfree way to navigate the Chrome browser.
+Edison is a voice activated way to navigate the Chrome browser.
 
 - <a href="#Demo">Demos</a>
 - <a href="#Download">Download</a>
@@ -11,13 +11,15 @@ Edison is a handsfree way to navigate the Chrome browser.
 
 <a name="Demo"></a>
 # Demos
-The voice interface can be triggered using the wakeword "Hey Edison":
+The voice interface can be triggered by clicking the extension's icon on the top right of the chrome toolbar:
+
+[![YOUTUBE DEMO](https://img.youtube.com/vi/Il0RF0RZK28/0.jpg)](https://www.youtube.com/watch?v=Il0RF0RZK28)
+
+Alternatively, the wakeword "Hey Edison" is available for a completely handsfree expierence:
 
 [![Wakeword Demo](https://img.youtube.com/vi/FUA7cIkikyY/0.jpg)](https://youtu.be/FUA7cIkikyY)
 
-Alternatively, you can also click the speaker icon on the top right of the chrome toolbar:
 
-[![YOUTUBE DEMO](https://img.youtube.com/vi/Il0RF0RZK28/0.jpg)](https://www.youtube.com/watch?v=Il0RF0RZK28)
 
 <a name="Download"></a>
 # Download
