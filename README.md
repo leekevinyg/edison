@@ -15,7 +15,7 @@ The voice interface can be triggered using the wakeword "Hey Edison":
 
 [![Wakeword Demo](https://img.youtube.com/vi/FUA7cIkikyY/0.jpg)](https://youtu.be/FUA7cIkikyY)
 
-Alternatively, you can also trigger the interface by clicking on the icon in the chrome toolbar.
+Alternatively, you can also click the speaker icon on the top right of the chrome toolbar:
 
 [![YOUTUBE DEMO](https://img.youtube.com/vi/Il0RF0RZK28/0.jpg)](https://www.youtube.com/watch?v=Il0RF0RZK28)
 
