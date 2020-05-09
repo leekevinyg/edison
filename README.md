@@ -78,9 +78,8 @@ Note that the interface currently handles *one command at a time*, therefore, ea
 
 For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
 
-Below is a demo of the wakeword experience:
+Check out the <a href="#Demo">Demos</a> to see the tool in action!
 
-[![Wakeword Demo](https://img.youtube.com/vi/kIuxNzgZh2g/0.jpg)](https://www.youtube.com/watch?v=kIuxNzgZh2g)
 <a name="Developing"></a>
 # Development Guide
 
