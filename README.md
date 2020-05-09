@@ -2,7 +2,7 @@
 
 Edison is a voice activated web navigation extension for the Chrome browser.
 
-- <a href="#Demo">Demo</a>
+- <a href="#Demo">Demos</a>
 - <a href="#Download">Download</a>
 - <a href="#UserGuide">User Guide</a>
 - <a href="#Developing">Development Guide</a>
@@ -10,9 +10,13 @@ Edison is a voice activated web navigation extension for the Chrome browser.
 - <a href="#Feedback">Feedback</a>
 
 <a name="Demo"></a>
-# Demo
+# Demos
 
 [![YOUTUBE DEMO](https://img.youtube.com/vi/Il0RF0RZK28/0.jpg)](https://www.youtube.com/watch?v=Il0RF0RZK28)
+
+The interface can also be triggered using the wakeword "Hey Edison":
+
+[![Wakeword Demo](https://img.youtube.com/vi/kIuxNzgZh2g/0.jpg)](https://www.youtube.com/watch?v=kIuxNzgZh2g)
 
 <a name="Download"></a>
 # Download
@@ -72,6 +76,9 @@ Note that the interface currently handles *one command at a time*, therefore, ea
 
 For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
 
+Below is a demo of the wakeword experience:
+
+[![Wakeword Demo](https://img.youtube.com/vi/kIuxNzgZh2g/0.jpg)](https://www.youtube.com/watch?v=kIuxNzgZh2g)
 <a name="Developing"></a>
 # Development Guide
 
