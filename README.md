@@ -27,51 +27,52 @@ You can download the extension from the chrome store [here](https://chrome.googl
 <a name="UserGuide"></a>
 # User Guide
 
-The extension can be triggered by saying "Hey Edison", followed by any of the commands detailed below.
-
-Alternatively, you can also trigger the interface by clicking on the extension icon in the top right of the chrome toolbar or by hitting "Command+Shift+O" on a Mac or "Ctrl+Shift+O" on Windows. 
-
 The following commands are currently supported:
 
 - **Open**  
 Opens the first google search result that best matches the words spoken after the "open" command.  
-Examples: "Open News", "Open Youtube", "Open Netflix".
+Examples: "Hey Edison, Open News", "Hey Edison, Open Youtube", "Hey Edison, Open Netflix".
 
 - **Click**  
 Tries to click anything that approximately matches the words spoken after the "click" command.  
-Examples: "Click Sign-In", "Click the title of a video", "Click a Netflix profile".
+Examples: "Hey Edison, Click Sign-In", "Hey Edison, Click the title of a video", "Hey Edison, Click a Netflix profile".
 
 - **Close**  
 Closes current tab. Useful if a mistake or unintended tab is opened.  
-Example: Just say "Close tab".
+Example: Just say "Hey Edison, Close tab".
 
 - **Scroll**  
 Scrolls the page up/down/left/right.  
-Examples: "Scroll Down", "Scroll Up", "Scroll Left", "Scroll Right".
+Examples: "Hey Edison, Scroll Down", "Hey Edison, Scroll Up", "Hey Edison, Scroll Left", "Hey Edison, Scroll Right".
 
 - **Media Controls for Video**  
 Plays or pauses the video in the current tab.  
-Example: Just say "Play" or "Pause" when viewing a video.
+Example: Just say "Hey Edison, Play" or "Hey Edison, Pause" when viewing a video.
 
 - **Focus Next Tab**  
 Navigates to the next tab
+Example: "Hey Edison, Focus Next Tab"
 
 - **Focus Previous Tab**  
 Navigates to the previous tab
+Example: "Hey Edison, Focus Previous Tab"
 
 - **Go back**  
 Hits the browser back button
+Example: "Hey Edison, Go Back"
+
 
 - **Go forward**  
 Hits the browser forward button
+Example: "Hey Edison, Go Forward"
 
 - **Rewind**  
 Specific to Netflix. Rewinds the current Netflix title by 10 seconds.  
-Example: Just say "Rewind" when viewing a Netflix title.
+Example: Just say "Hey Edison, Rewind" when viewing a Netflix title.
 
 - **Skip**  
 Specific to Netflix. Fast forwards the Netflix title by 10 seconds.  
-Example: Just say "Skip" when viewing a Netflix title.
+Example: Just say "Hey Edison, Skip" when viewing a Netflix title.
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
 
