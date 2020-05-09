@@ -17,7 +17,7 @@ The voice interface can be triggered by clicking the extension's icon on the top
 
 Alternatively, the wakeword "Hey Edison" is available for a completely handsfree expierence:
 
-[![Wakeword Demo](https://img.youtube.com/vi/FUA7cIkikyY/0.jpg)](https://youtu.be/FUA7cIkikyY)
+[![Wakeword Demo](https://img.youtube.com/vi/50mDH2S5m_o/0.jpg)](https://youtu.be/50mDH2S5m_o)
 
 
 
