@@ -11,12 +11,13 @@ Edison is a voice activated web navigation extension for the Chrome browser.
 
 <a name="Demo"></a>
 # Demos
-
-[![YOUTUBE DEMO](https://img.youtube.com/vi/Il0RF0RZK28/0.jpg)](https://www.youtube.com/watch?v=Il0RF0RZK28)
-
-The interface can also be triggered using the wakeword "Hey Edison":
+The voice interface can be triggered using the wakeword "Hey Edison":
 
 [![Wakeword Demo](https://img.youtube.com/vi/kIuxNzgZh2g/0.jpg)](https://www.youtube.com/watch?v=kIuxNzgZh2g)
+
+Alternatively, you can also trigger the interface by clicking on the icon in the chrome toolbar.
+
+[![YOUTUBE DEMO](https://img.youtube.com/vi/Il0RF0RZK28/0.jpg)](https://www.youtube.com/watch?v=Il0RF0RZK28)
 
 <a name="Download"></a>
 # Download
@@ -26,9 +27,9 @@ You can download the extension from the chrome store [here](https://chrome.googl
 <a name="UserGuide"></a>
 # User Guide
 
-The extension can be triggered by clicking on the extension icon in the top right of the chrome toolbar or by hitting "Command+Shift+O" on a Mac or "Ctrl+Shift+O" on Windows. 
+The extension can be triggered by saying "Hey Edison", followed by any of the commands detailed below.
 
-Alternatively, the wakeword "Hey Edison" is available for a completely handsfree experience. If using the wakeword, just say "Hey Edison" followed by any of the commands detailed below.
+Alternatively, you can also trigger the interface by clicking on the extension icon in the top right of the chrome toolbar or by hitting "Command+Shift+O" on a Mac or "Ctrl+Shift+O" on Windows. 
 
 The following commands are currently supported:
 
