@@ -134,4 +134,4 @@ You can also watch a presentation on the motivations behind the project [here](h
 <a name="Feedback"></a>
 # Suggestions and Feedback
 
-If you have any ideas on how to improve the tool, or encounter any behaviour that is unexpected, please feel free to shoot me an email at klee2010@gmail.com
+If you have any ideas on how to improve the tool, or encounter any behaviour that is unexpected, please feel free to shoot me an email at ```klee2010@gmail.com```
