@@ -1,6 +1,6 @@
 # Edison
 
-Edison is a voice activated way to navigate the Chrome browser.
+Edison is a voice activated way to navigate the Chrome browser
 
 - <a href="#Demo">Demos</a>
 - <a href="#Download">Download</a>
