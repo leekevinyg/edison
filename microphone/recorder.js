@@ -19,7 +19,7 @@ class Recorder {
     annyang.addCallback('start', () => {
       helpers.muteTabs();
       setTimeout(helpers.unmuteTabs, TIMEOUTS.MUTE_TABS_TIMEOUT);
-      const audio = new Audio('https://mozilla.github.io/firefox-voice/chime.ogg');
+      const audio = new Audio('https://leekevinyg.github.io/edison/chime.ogg');
       audio.play();
       this.onStart();
     });
