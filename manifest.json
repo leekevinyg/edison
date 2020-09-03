@@ -4,7 +4,6 @@
     "description": "Voice activated browsing of Chrome.",
     "manifest_version": 2,
     "permissions": [
-        "declarativeContent", 
         "tabs", 
         "activeTab",
         "https://*/*"
