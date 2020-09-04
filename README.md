@@ -11,7 +11,7 @@ Edison is a voice activated way to navigate the Chrome browser.
 
 <a name="Demo"></a>
 # Demos
-The voice interface can be triggered by the wakeword "Hey Edison", followed by one of the supported commands documented is the <a href="UserGuide">User Guide</a> below.
+The voice interface can be triggered by the wakeword "Hey Edison", followed by one of the supported commands documented in the <a href="UserGuide">User Guide</a> below.
 
 [![Wakeword Demo](https://img.youtube.com/vi/50mDH2S5m_o/0.jpg)](https://youtu.be/50mDH2S5m_o)
 
