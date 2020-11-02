@@ -117,7 +117,7 @@ Some useful resources:
 
 (2) [Chrome Extension Message Passing](https://developer.chrome.com/extensions/messaging)
 
-If you have any questions, feel free to shoot me an email at klee2010@gmail.com.
+If you have any questions, feel free to shoot me an email at ```klee2010@gmail.com```.
 
 <a name="Doc"></a>
 # Design Document
