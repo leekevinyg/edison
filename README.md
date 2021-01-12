@@ -72,7 +72,7 @@ Example: Just say "Hey Edison, Skip" when viewing a Netflix title.
 
 Note that the interface currently handles *one command at a time*, therefore, each command will need to invoke the interface again separately.
 
-For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user expierence.
+For accessibility use cases, it is recommended that passwords be saved for the most commonly used websites to improve the overall user experience.
 
 Check out the <a href="#Demo">Demos</a> to see the tool in action!
 
